@@ -9,12 +9,31 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+#include <fstream>
 #include "../Data Structures/bstree.h"
 
 using namespace std;
 
 class Customers {
+
     public:
+
+    // set the customer
+    bool setCustomer(ifstream &infile);
+
+    // display the customer's history
+    void displayHistory();
+
+    // add a tansaction into the customer's history
+    void addTransaction();
+
+    // get the customer's history
+    void getHistory();
+
+    // getters and setters
+    int getCustomerID() const;
+    string getFirstN() const;
+    string getLastN() const;
 
     private:
         // Unique Id Number
@@ -23,6 +42,6 @@ class Customers {
         string firstN;
         // last name
         string lastN;
-}
+};
 
 #endif
