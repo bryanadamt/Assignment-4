@@ -16,7 +16,17 @@ using namespace std;
 class Classics {
     public:
 
+        // Setter and Getter functions
+        void setMonth(int);
+        void setMActor(string);
+
+        int getMonth();
+        string getMActor();
     private:
+        // month of release
+        int month;
+        // major actor full name
+        string majorActor;
 }
 
 #endif

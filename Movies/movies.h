@@ -6,6 +6,8 @@
 // Purpose - This class is a representation of a movie
 // --------------------------------------------------------------------------------------------------------------------
 
+#include <iostream>
+
 using namespace std;
 
 #ifndef MOVIES_H
@@ -13,11 +15,18 @@ using namespace std;
 
 class Movies {
     public:
+        // Setter and Getter functions
+        void setStock(int);
+        void setDirector(string);
+        void setYear(int);
 
+        int getStock() const;
+        string getDirector() const;
+        int getYear() const;
     private:
         int stock;
         string director;
-        
+        int year;
 }
 
 #endif

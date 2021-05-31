@@ -12,5 +12,38 @@
 
 using namespace std;
 
-//---------------------------- method() -------------------------------------
-// method description
+//---------------------------- setStock(int) -------------------------------------
+// changes the stock number of a certain movie
+void Movie::setStock(int newStock) {
+    stock = newStock;
+}
+
+//---------------------------- setDirector(string) -------------------------------------
+// changes the director name of a certain movie
+void Movie::setDirector(string newDirector) {
+    director = newDirector;
+}
+
+//---------------------------- setYear(int) -------------------------------------
+// changes the year of a certain movie
+void Movie::setStock(int newYear) {
+    year = newYear;
+}
+
+//---------------------------- getStock() -------------------------------------
+// get the stock number of a certain movie
+int Movie::getStock() {
+    return stock;
+}
+
+//---------------------------- getDirector() -------------------------------------
+// get the name of the director of a certain movie
+string Movie::getDirector() {
+    return director;
+}
+
+//---------------------------- getYear() -------------------------------------
+// get the year number of a certain movie
+int Movie::getYear() {
+    return year;
+}
