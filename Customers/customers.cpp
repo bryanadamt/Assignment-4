@@ -7,8 +7,73 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 #include "customers.h"
+#include <iostream>
 
 using namespace std;
 
-//---------------------------- method() -------------------------------------
-// method description
+//---------------------------- setCustomer() --------------------------------
+// sets the customer's ID, first name, and last name from the file
+//---------------------------------------------------------------------------
+
+bool Customers::setCustomer(ifstream &infile){
+
+    // read the customer's ID
+    infile >> customerID;
+
+    if (customerID < 0)
+    {
+        // display error message for the invalid user ID
+        cout << "Error. Please check the customer ID" << endl;
+
+        return false;
+    }
+    else
+    {
+        // read and set the customer's name from the file
+        infile >> lastN;
+        infile >> firstN;
+
+        return true;
+    }
+    
+}
+
+
+//---------------------------- displayHistory() -----------------------------
+// displays the customer's history
+//---------------------------------------------------------------------------
+
+void Customers::displayHistory(){
+
+}
+
+//---------------------------- addTransaction() -----------------------------
+// adds a tansaction into the customer's history
+//---------------------------------------------------------------------------
+
+void Customers::addTransaction(){
+
+}
+
+
+//---------------------------- getHistory() ---------------------------------
+// get the customer's history
+//---------------------------------------------------------------------------
+
+void Customers::getHistory(){
+
+}
+
+
+//---------------------------- getters and setters() --------------------------------
+// sets the customer's ID, first name, and last name from the file
+//---------------------------------------------------------------------------
+int Customers::getCustomerID() const{
+    return customerID;
+}
+string Customers::getFirstN() const{
+    return firstN;
+}
+string Customers::getLastN() const{
+    return lastN;
+}
