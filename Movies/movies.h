@@ -15,16 +15,23 @@ using namespace std;
 
 class Movies {
     public:
+        // pure virtual destructor
+        virtual ~Movies() = 0;
+
         // Setter and Getter functions
         void setStock(int);
+        void setTitle(string);
         void setDirector(string);
         void setYear(int);
 
         int getStock() const;
+        string getTitle(string);
         string getDirector() const;
         int getYear() const;
+
     private:
         int stock;
+        string title;
         string director;
         int year;
 }

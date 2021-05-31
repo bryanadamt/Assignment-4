@@ -18,6 +18,12 @@ void Movie::setStock(int newStock) {
     stock = newStock;
 }
 
+//---------------------------- setTitle(string) -------------------------------------
+// changes the title of a movie
+void Movie::setStock(string newTitle) {
+    title = newTitle;
+}
+
 //---------------------------- setDirector(string) -------------------------------------
 // changes the director name of a certain movie
 void Movie::setDirector(string newDirector) {
@@ -34,6 +40,12 @@ void Movie::setStock(int newYear) {
 // get the stock number of a certain movie
 int Movie::getStock() {
     return stock;
+}
+
+//---------------------------- getTitle() -------------------------------------
+// get the title of a movie
+string Movie::getTitle() {
+    return title;
 }
 
 //---------------------------- getDirector() -------------------------------------

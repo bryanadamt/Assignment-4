@@ -15,8 +15,10 @@ using namespace std;
 
 class Comedy {
     public:
-
-    private:
+        // Constructor
+        Comedy(int, string, string, int);
+        // Destructor
+        ~Comedy();
 }
 
 #endif

@@ -15,8 +15,11 @@ using namespace std;
 
 class Drama {
     public:
+        // Constructor
+        Drama(int, string, string, int);
 
-    private:
+        // Destructor
+        ~Drama();
 }
 
 #endif
