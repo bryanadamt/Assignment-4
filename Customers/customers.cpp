@@ -66,7 +66,7 @@ void Customers::getHistory(){
 
 
 //---------------------------- getters and setters() --------------------------------
-// sets the customer's ID, first name, and last name from the file
+// returns the customer's ID, first name, and last name from the file
 //---------------------------------------------------------------------------
 int Customers::getCustomerID() const{
     return customerID;
