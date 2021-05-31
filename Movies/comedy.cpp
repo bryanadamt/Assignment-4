@@ -10,5 +10,17 @@
 
 using namespace std;
 
-//---------------------------- method() -------------------------------------
-// method description
+//---------------------------- Comedy(int, string, string, int) -------------------------------------
+// Constructor
+Comedy::Comedy(int stock, string director, string title, int year) {
+    this.stock = stock;
+    this.director = director;
+    this.title = title;
+    this.year = year;
+}
+
+//---------------------------- ~Comedy() -------------------------------------
+// Destructor
+Comedy::~Comedy() {
+
+}

@@ -10,5 +10,17 @@
 
 using namespace std;
 
-//---------------------------- method() -------------------------------------
-// method description
+//---------------------------- Drama(int, string, string, int) -------------------------------------
+// Constructor
+Drama::Drama(int stock, string director, string title, int year) {
+    this.stock = stock;
+    this.director = director;
+    this.title = title;
+    this.year = year;
+}
+
+//---------------------------- ~Drama() -------------------------------------
+// Destructor
+Drama::~Drama() {
+
+}

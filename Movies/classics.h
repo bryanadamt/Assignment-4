@@ -15,6 +15,11 @@ using namespace std;
 
 class Classics {
     public:
+        // Constructor
+        Classics(int, string, string, string, int, int);
+
+        // Destructor
+        ~Classics();
 
         // Setter and Getter functions
         void setMonth(int);
@@ -26,7 +31,7 @@ class Classics {
         // month of release
         int month;
         // major actor full name
-        string majorActor;
+        string mActor;
 }
 
 #endif
