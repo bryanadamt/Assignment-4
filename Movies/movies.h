@@ -15,6 +15,9 @@ class Movies {
     public:
 
     private:
+        int stock;
+        string director;
+        
 }
 
 #endif
