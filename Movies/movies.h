@@ -16,7 +16,7 @@ using namespace std;
 class Movies {
     public:
         // pure virtual destructor
-        virtual ~Movies() = 0;
+        // virtual ~Movies() = 0;
 
         // Setter and Getter functions
         void setStock(int);
@@ -25,7 +25,7 @@ class Movies {
         void setYear(int);
 
         int getStock() const;
-        string getTitle(string);
+        string getTitle() const;
         string getDirector() const;
         int getYear() const;
 
@@ -34,6 +34,6 @@ class Movies {
         string title;
         string director;
         int year;
-}
+};
 
 #endif

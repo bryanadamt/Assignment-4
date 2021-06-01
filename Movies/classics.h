@@ -9,11 +9,11 @@
 #ifndef CLASSICS_H
 #define CLASSICS_H
 
-#include "../Movies/movies.h"
+#include "movies.h"
 
 using namespace std;
 
-class Classics {
+class Classics : public Movies {
     public:
         // Constructor
         Classics(int, string, string, string, int, int);
@@ -25,13 +25,13 @@ class Classics {
         void setMonth(int);
         void setMActor(string);
 
-        int getMonth();
-        string getMActor();
+        int getMonth() const;
+        string getMActor() const;
     private:
         // month of release
         int month;
         // major actor full name
         string mActor;
-}
+};
 
 #endif

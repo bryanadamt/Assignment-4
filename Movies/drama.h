@@ -9,17 +9,17 @@
 #ifndef DRAMA_H
 #define DRAMA_H
 
-#include "../Movies/movies.h"
+#include "movies.h"
 
 using namespace std;
 
-class Drama {
+class Drama : public Movies {
     public:
         // Constructor
         Drama(int, string, string, int);
 
         // Destructor
         ~Drama();
-}
+};
 
 #endif

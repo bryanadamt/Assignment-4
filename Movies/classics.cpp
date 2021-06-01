@@ -13,12 +13,12 @@ using namespace std;
 //---------------------------- Classics(int, string, string, string, int, int) -------------------------------------
 // Constructor
 Classics::Classics(int stock, string director, string title, string mactor, int month, int year) {
-    this.stock = stock;
-    this.director = director;
-    this.title = title;
-    this.mActor = actor;
-    this.month = month;
-    this.year = year;
+    setStock(stock);
+    setDirector(director);
+    setTitle(title);
+    setMActor(mactor);
+    setMonth(month);
+    setYear(year);
 }
 
 //---------------------------- ~Classics() -------------------------------------
@@ -35,18 +35,18 @@ void Classics::setMonth(int newMonth) {
 
 //---------------------------- setMActor(string) -------------------------------------
 // Sets the major Actor of a classic movie
-void Classics::setMonth(string newMActor) {
+void Classics::setMActor(string newMActor) {
     mActor = newMActor;
 }
 
 //---------------------------- getMonth() -------------------------------------
 // Gets the month of a classic movie
-int Classics::getMonth() {
+int Classics::getMonth() const {
     return month;
 }
 
 //---------------------------- getMActor() -------------------------------------
 // Gets the full name of the major actor
-int Classics::getMActor() {
+string Classics::getMActor() const {
     return mActor;
 }

@@ -13,10 +13,10 @@ using namespace std;
 //---------------------------- Comedy(int, string, string, int) -------------------------------------
 // Constructor
 Comedy::Comedy(int stock, string director, string title, int year) {
-    this.stock = stock;
-    this.director = director;
-    this.title = title;
-    this.year = year;
+    setStock(stock);
+    setDirector(director);
+    setTitle(title);
+    setYear(year);
 }
 
 //---------------------------- ~Comedy() -------------------------------------

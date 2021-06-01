@@ -6,7 +6,7 @@
 // Purpose - This class is a representation of a movie
 // --------------------------------------------------------------------------------------------------------------------
 
-#include "../Movies/movies.h"
+#include "movies.h"
 
 #include <iostream>
 
@@ -14,48 +14,48 @@ using namespace std;
 
 //---------------------------- setStock(int) -------------------------------------
 // changes the stock number of a certain movie
-void Movie::setStock(int newStock) {
+void Movies::setStock(int newStock) {
     stock = newStock;
 }
 
 //---------------------------- setTitle(string) -------------------------------------
 // changes the title of a movie
-void Movie::setStock(string newTitle) {
+void Movies::setTitle(string newTitle) {
     title = newTitle;
 }
 
 //---------------------------- setDirector(string) -------------------------------------
 // changes the director name of a certain movie
-void Movie::setDirector(string newDirector) {
+void Movies::setDirector(string newDirector) {
     director = newDirector;
 }
 
 //---------------------------- setYear(int) -------------------------------------
 // changes the year of a certain movie
-void Movie::setStock(int newYear) {
+void Movies::setYear(int newYear) {
     year = newYear;
 }
 
 //---------------------------- getStock() -------------------------------------
 // get the stock number of a certain movie
-int Movie::getStock() {
+int Movies::getStock() const {
     return stock;
 }
 
 //---------------------------- getTitle() -------------------------------------
 // get the title of a movie
-string Movie::getTitle() {
+string Movies::getTitle() const {
     return title;
 }
 
 //---------------------------- getDirector() -------------------------------------
 // get the name of the director of a certain movie
-string Movie::getDirector() {
+string Movies::getDirector() const {
     return director;
 }
 
 //---------------------------- getYear() -------------------------------------
 // get the year number of a certain movie
-int Movie::getYear() {
+int Movies::getYear() const {
     return year;
 }

@@ -9,16 +9,16 @@
 #ifndef COMEDY_H
 #define COMEDY_H
 
-#include "../Movies/movies.h"
+#include "movies.h"
 
 using namespace std;
 
-class Comedy {
+class Comedy : public Movies {
     public:
         // Constructor
         Comedy(int, string, string, int);
         // Destructor
         ~Comedy();
-}
+};
 
 #endif
