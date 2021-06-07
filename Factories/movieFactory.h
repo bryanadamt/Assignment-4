@@ -23,7 +23,7 @@ class MovieFactory {
         void readMovieData(ifstream&);
 
         // Assign movie that was read from the file to one of the genres
-        bool movieMaker(char, ifstream&)
-}
+        bool movieMaker(char, ifstream&);
+};
 
 #endif

@@ -6,7 +6,7 @@
 // Purpose - class used to make different genres of movie
 // --------------------------------------------------------------------------------------------------------------------
 
-#include "../Factories/movieFactory.h"
+#include "movieFactory.h"
 
 using namespace std;
 
@@ -23,5 +23,6 @@ bool MovieFactory::movieMaker(char genre, ifstream& movieData) {
         cout << "invalid input detected" << endl;
         return false;
     }
+    return true;
     // note deal with movie that has correct genre but incomplete data
 }
