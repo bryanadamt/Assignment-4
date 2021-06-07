@@ -6,16 +6,10 @@
 #include "Factories/movieFactory.cpp"
 
 int main() {
-    ifstream moviesFile("data4movies.txt");
-    string a;
-    while (getline(moviesFile, a)) {
-        stringstream s(a);
-        string t;
-        while (s.good()) {
-            getline(s, t, ',');
-            cout << t;
-        }
-        cout << endl;
-    }
+    ifstream movieData("data4moviess.txt");
+    if (!movieData) {
+		cout << "File could not be opened." << endl;
+		return -1;
+	}
     return 0;
 }

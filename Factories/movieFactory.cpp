@@ -10,29 +10,25 @@
 #include <fstream>
 #include <string>
 using namespace std;
-//---------------------------- readMovieData(ifstream&) -------------------------------------
-// Read the entire movie file
-void MovieFactory::readMovieData(ifstream& movieData) {
-    char genre;
-    while (movieData >> genre) {
-        movieMaker(genre, movieData);
-    }
-}
 
-//---------------------------- movieMaker(char, ifstream&) -------------------------------------
+//---------------------------- movieMaker(stringstream&) -------------------------------------
 // Assign movie that was read from the file to one of the genres
-bool MovieFactory::movieMaker(char genre, ifstream& movieData) {
-    
-    if (genre == 'F') {
+bool MovieFactory::movieMaker(stringstream& lineData) {
+    string t;
+    while (lineData.good()) {
+        getline(lineData, t, ',');
+        cout << t;
+    }    
+    // if (genre == 'F') {
 
-    } else if (genre == 'D') {
+    // } else if (genre == 'D') {
 
-    } else if (genre == 'C') {
+    // } else if (genre == 'C') {
 
-    } else {
-        cout << "invalid input detected" << endl;
-        return false;
-    }
+    // } else {
+    //     cout << "invalid input detected" << endl;
+    //     return false;
+    // }
     return true;
     // note deal with movie that has correct genre but incomplete data
 }

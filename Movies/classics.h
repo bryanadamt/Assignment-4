@@ -20,13 +20,6 @@ class Classics : public Movies {
 
         // Destructor
         ~Classics();
-
-        // Setter and Getter functions
-        void setMonth(int);
-        void setMActor(string);
-
-        int getMonth() const;
-        string getMActor() const;
     private:
         // month of release
         int month;

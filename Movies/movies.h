@@ -15,18 +15,12 @@ using namespace std;
 
 class Movies {
     public:
-        // Setter and Getter functions
-        void setStock(int);
-        void setTitle(string);
-        void setDirector(string);
-        void setYear(int);
 
-        int getStock() const;
-        string getTitle() const;
-        string getDirector() const;
-        int getYear() const;
 
-    private:
+    protected:
+        // The constructor is protected so it can't be declared
+        Movies();
+
         int stock;
         string title;
         string director;

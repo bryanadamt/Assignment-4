@@ -26,27 +26,3 @@ Classics::Classics(int stock, string director, string title, string mactor, int 
 Classics::~Classics() {
 
 }
-
-//---------------------------- setMonth(int) -------------------------------------
-// Sets the month of a classic movie
-void Classics::setMonth(int newMonth) {
-    month = newMonth;
-}
-
-//---------------------------- setMActor(string) -------------------------------------
-// Sets the major Actor of a classic movie
-void Classics::setMActor(string newMActor) {
-    mActor = newMActor;
-}
-
-//---------------------------- getMonth() -------------------------------------
-// Gets the month of a classic movie
-int Classics::getMonth() const {
-    return month;
-}
-
-//---------------------------- getMActor() -------------------------------------
-// Gets the full name of the major actor
-string Classics::getMActor() const {
-    return mActor;
-}
