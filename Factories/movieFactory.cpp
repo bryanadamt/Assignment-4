@@ -7,12 +7,21 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 #include "movieFactory.h"
-
+#include <fstream>
+#include <string>
 using namespace std;
+//---------------------------- readMovieData(ifstream&) -------------------------------------
+// Read the entire movie file
+void MovieFactory::readMovieData(ifstream& movieData) {
+    string line;
+    while (getline(movieData, line)) {
+        cout << line << endl;
+    }
+}
 
 //---------------------------- movieMaker(char, ifstream&) -------------------------------------
 // Assign movie that was read from the file to one of the genres
-bool MovieFactory::movieMaker(char genre, ifstream& movieData) {
+bool MovieFactory::movieMaker(char genre, string movieData) {
     if (genre == 'F') {
 
     } else if (genre == 'D') {
