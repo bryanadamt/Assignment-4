@@ -13,15 +13,16 @@ using namespace std;
 //---------------------------- readMovieData(ifstream&) -------------------------------------
 // Read the entire movie file
 void MovieFactory::readMovieData(ifstream& movieData) {
-    string line;
-    while (getline(movieData, line)) {
-        cout << line << endl;
+    char genre;
+    while (movieData >> genre) {
+        movieMaker(genre, movieData);
     }
 }
 
 //---------------------------- movieMaker(char, ifstream&) -------------------------------------
 // Assign movie that was read from the file to one of the genres
-bool MovieFactory::movieMaker(char genre, string movieData) {
+bool MovieFactory::movieMaker(char genre, ifstream& movieData) {
+    
     if (genre == 'F') {
 
     } else if (genre == 'D') {
