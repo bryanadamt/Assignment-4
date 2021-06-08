@@ -13,22 +13,49 @@ using namespace std;
 
 //---------------------------- movieMaker(stringstream&) -------------------------------------
 // Assign movie that was read from the file to one of the genres
-bool MovieFactory::movieMaker(stringstream& lineData) {
-    string t;
-    while (lineData.good()) {
-        getline(lineData, t, ',');
-        cout << t;
-    }    
-    // if (genre == 'F') {
+Movies* MovieFactory::movieMaker(const stringstream& lineData) {
+    Movies *newMovie = NULL;
+    string genre, data;
+    getline(lineData, genre, ',');
 
-    // } else if (genre == 'D') {
+    if (genre == 'F' || genre == 'D' || genre == 'C') {
+        cout << "invalid input detected" << endl;
+        return NULL;
+    }
+    int stock, month, year;
+    string director, title, actor;
 
-    // } else if (genre == 'C') {
+    // Get stock
+    getline(lineData, data, ',');
+    stock = data;
+    // Get director name
+    getline(lineData, data, ',');
+    director = data;
+    // Get title
+    getline(lineData, data, ',');
+    title = data;
 
-    // } else {
-    //     cout << "invalid input detected" << endl;
-    //     return false;
-    // }
-    return true;
+    // Get the last part of the string and put it into data
+    getline(lineData, data, ',');
+
+    if (genre == 'F') {
+        // Get Year
+        year = data;
+        newMovie = new Comedy(stock, director, title, year);
+    } else if (genre == 'D') {
+        // Get Year
+        year = data;
+        newMovie = new Drama(stock, director, title, year);
+    } else if (genre == 'C') {
+        string[] temp = data.split(" ");        
+        // Get Actor full name
+        actor = temp[0] + temp [1];
+        // Get Month
+        month = temp[2];
+        // Get Year
+        year = temp[3];
+    }
+
+    return newMovie;
     // note deal with movie that has correct genre but incomplete data
 }

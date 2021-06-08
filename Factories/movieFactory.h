@@ -20,7 +20,7 @@ using namespace std;
 class MovieFactory {
     public:
         // Assign movie that was read from the file to one of the genres
-        bool movieMaker(stringstream&);
+        Movies* movieMaker(const stringstream&);
 };
 
 #endif

@@ -25,6 +25,9 @@ void Store::readMovieData(ifstream& movieData) {
     while (getline(movieData, line)) {
         Movies *newMovie = NULL;
         stringstream ss(line);
-        mFactory.movieMaker(ss);
+        newMovie = mFactory.movieMaker(ss);
+        // reminder: if input is invalid newMovie is still NULL
     }
+
+    // put the newMovie to bst
 }
