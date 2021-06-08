@@ -12,11 +12,11 @@ using namespace std;
 
 //---------------------------- Comedy(int, string, string, int) -------------------------------------
 // Constructor
-Comedy::Comedy() {
-    stock = 0;
-    director = "";
-    title = "";
-    year = 0;
+Comedy::Comedy(int stocks, string director, string title, int year) {
+    setStock(stock);
+    setDirector(director);
+    setTitle(title);
+    setYear(year);
 }
 
 //---------------------------- ~Comedy() -------------------------------------

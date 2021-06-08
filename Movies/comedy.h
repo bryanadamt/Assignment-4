@@ -16,7 +16,7 @@ using namespace std;
 class Comedy : public Movies {
     public:
         // Constructor
-        Comedy();
+        Comedy(int, string, string, int);
         // Destructor
         ~Comedy();
 };
