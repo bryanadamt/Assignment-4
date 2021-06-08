@@ -43,18 +43,19 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
 
     if (genre == 'F') {
         year = stoi(data);
-        newMovie = new Comedy();
+        newMovie = new Comedy(stock, director, title, year);
     } 
     else if (genre == 'D') {
         year = stoi(data);
-        //newMovie = new Drama(stock, director, title, year);
+        newMovie = new Drama(stock, director, title, year);
     } 
     else if (genre == 'C') {
         stringstream ss(data);
         string fname, lname;
         ss >> fname >> lname >> month >> year;
         actor = fname + " " + lname;
-        //newMovie = new Classics(stock, director, title, actor, month, year);
+
+        newMovie = new Classics(stock, director, title, actor, month, year);
     }
 
     return newMovie;
