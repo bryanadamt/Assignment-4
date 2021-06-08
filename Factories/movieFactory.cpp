@@ -13,49 +13,57 @@ using namespace std;
 
 //---------------------------- movieMaker(stringstream&) -------------------------------------
 // Assign movie that was read from the file to one of the genres
-Movies* MovieFactory::movieMaker(const stringstream& lineData) {
+Movies* MovieFactory::movieMaker(stringstream& lineData) {
     Movies *newMovie = NULL;
-    string genre, data;
-    getline(lineData, genre, ',');
+    string data;
+    
+    // Get Genre
+    getline(lineData, data, ',');
+    char genre;
+    genre = data[0];
 
-    if (genre == 'F' || genre == 'D' || genre == 'C') {
+    if (genre != 'F' && genre != 'D' && genre != 'C') {
         cout << "invalid input detected" << endl;
         return NULL;
     }
+
     int stock, month, year;
     string director, title, actor;
 
-    // Get stock
+    // Get Stock
     getline(lineData, data, ',');
-    stock = data;
-    // Get director name
-    getline(lineData, data, ',');
-    director = data;
-    // Get title
-    getline(lineData, data, ',');
-    title = data;
+    stock = stoi(data);
 
-    // Get the last part of the string and put it into data
-    getline(lineData, data, ',');
+    // Get Director Name
+    getline(lineData, director, ',');
+    // Get Title
+    getline(lineData, title, ',');
 
     if (genre == 'F') {
-        // Get Year
-        year = data;
-        newMovie = new Comedy(stock, director, title, year);
-    } else if (genre == 'D') {
-        // Get Year
-        year = data;
-        newMovie = new Drama(stock, director, title, year);
-    } else if (genre == 'C') {
-        string[] temp = data.split(" ");        
-        // Get Actor full name
-        actor = temp[0] + temp [1];
-        // Get Month
-        month = temp[2];
-        // Get Year
-        year = temp[3];
+        year = stoi(data);
+        newMovie = new Comedy();
+    } 
+    else if (genre == 'D') {
+        year = stoi(data);
+        //newMovie = new Drama(stock, director, title, year);
+    } 
+    else if (genre == 'C') {
+        stringstream ss(data);
+        string fname, lname;
+        ss >> fname >> lname >> month >> year;
+        actor = fname + " " + lname;
+        //newMovie = new Classics(stock, director, title, actor, month, year);
     }
+
+    // newMovie->stock = stock;
+    // newMovie->director = director;
+    // newMovie->title = title;
+    // newMovie->year = year;
 
     return newMovie;
     // note deal with movie that has correct genre but incomplete data
+}
+
+int main() {
+    return 0;
 }

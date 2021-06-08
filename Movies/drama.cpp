@@ -13,10 +13,10 @@ using namespace std;
 //---------------------------- Drama(int, string, string, int) -------------------------------------
 // Constructor
 Drama::Drama(int stock, string director, string title, int year) {
-    setStock(stock);
-    setDirector(director);
-    setTitle(title);
-    setYear(year);
+    this->stock = stock;
+    this->director = director;
+    this->title = title;
+    this->year = year;
 }
 
 //---------------------------- ~Drama() -------------------------------------
