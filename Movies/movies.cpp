@@ -11,6 +11,14 @@
 #include <iostream>
 
 using namespace std;
+//---------------------------- Movies() -------------------------------------
+// Protected Constructor
+Movies::Movies() {
+    this->stock = 0;
+    this->title = "";
+    this->director = "";
+    this->year = 0;
+}
 
 //---------------------------- setStock(int) -------------------------------------
 // changes the stock number of a certain movie

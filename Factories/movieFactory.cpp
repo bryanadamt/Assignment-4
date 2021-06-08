@@ -55,10 +55,10 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
         //newMovie = new Classics(stock, director, title, actor, month, year);
     }
 
-    // newMovie->stock = stock;
-    // newMovie->director = director;
-    // newMovie->title = title;
-    // newMovie->year = year;
+    newMovie->setStock(stock);
+    newMovie->setDirector(director);
+    newMovie->setTitle(title);
+    newMovie->setYear(year);
 
     return newMovie;
     // note deal with movie that has correct genre but incomplete data
