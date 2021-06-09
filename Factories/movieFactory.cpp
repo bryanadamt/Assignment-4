@@ -40,7 +40,6 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     getline(lineData, title, ',');
     // Get the rest of the data
     getline(lineData, data, ',');
-
     if (genre == 'F') {
         year = stoi(data);
         newMovie = new Comedy(stock, director, title, year);
