@@ -11,6 +11,56 @@
 
 using namespace std;
 
-//---------------------------- method() --------------------------------
-// 
-//---------------------------------------------------------------------------
+
+
+//---------------------------- getTransationType() --------------------------------
+char Transactions::getTransationType() const{
+
+    return transactionType;
+
+}
+
+        
+//---------------------------- getCustomersID() --------------------------------
+int Transactions::getCustomersID() const{
+
+    return customerID;
+
+}
+
+//---------------------------- getFormat() --------------------------------
+char Transactions::getFormat() const{
+
+    return format;
+}
+
+//---------------------------- getMovie() --------------------------------
+// Movies* Transactions::getMovie() const{
+//     return movie;
+// }
+
+
+//---------------------------- setTransactionType(char transactionType) --------------------------------
+void Transactions::setTransactionType(char transactionType){
+
+    this->transactionType = transactionType;
+
+}
+
+
+//---------------------------- setCusomersID(int customerID) --------------------------------
+void Transactions::setCusomersID(int customerID){
+
+    this->customerID = customerID;
+}
+
+//---------------------------- setFormat(char format) --------------------------------
+void Transactions::setFormat(char format){
+
+    this->format = format;
+}
+
+//---------------------------- setMovie(Movies* movie) --------------------------------
+// void Transactions::setMovie(Movies* movie){
+//    this->movie = movie; 
+// }
