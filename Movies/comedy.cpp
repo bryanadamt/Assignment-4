@@ -27,6 +27,6 @@ Comedy::~Comedy() {
 
 //---------------------------- toString() -------------------------------------
 // Prints the object
-void Comedy::toString(ostream& stream) const {
-    stream << getStock() << " " << getDirector() << " " << getTitle() << " " << getYear();
+void Comedy::toString() const {
+    cout << getStock() << " " << getDirector() << " " << getTitle() << " " << getYear() << endl;
 }

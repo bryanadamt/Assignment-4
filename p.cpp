@@ -18,13 +18,25 @@ int main() {
 		return -1;
 	}
 
+    // std::string input = "C, 10, Michael Curtiz, Casablanca, Ingrid Bergman 8 1942";
+    // std::istringstream ss(input);
+    // std::string token;
+
+
+    
+    // while(std::getline(ss, token, ',')) {
+    //     std::cout << token << '\n';
+    // }
+
     MovieFactory m;
     string line;
-    while (movieData >> line) {
+    while (getline(movieData, line)) {
         stringstream ss(line);
         Movies *newMovie = NULL;
         newMovie = m.movieMaker(ss);
-        cout << newMovie << endl;
+        if (newMovie != NULL) {
+            newMovie->toString();
+        }
     }
 
     return 0;

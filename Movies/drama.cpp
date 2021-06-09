@@ -27,6 +27,6 @@ Drama::~Drama() {
 
 //---------------------------- toString() -------------------------------------
 // Prints the object
-void Drama::toString(ostream& stream) const {
-    stream << getStock() << " " << getDirector() << " " << getTitle() << " " << getYear();
+void Drama::toString() const {
+    cout << getStock() << " " << getDirector() << " " << getTitle() << " " << getYear() << endl;
 }

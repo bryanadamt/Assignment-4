@@ -53,7 +53,7 @@ string Classics::getMActor() const {
 
 //---------------------------- toString() -------------------------------------
 // Prints the object
-void Classics::toString(ostream& stream) const {
-    stream << getStock() << " " << getDirector() << " " << getTitle();
-    stream << getMActor() << " " << getMonth() << " " << getYear();
+void Classics::toString() const {
+    cout << getStock() << " " << getDirector() << " " << getTitle() << " ";
+    cout << getMActor() << " " << getMonth() << " " << getYear() << endl;
 }

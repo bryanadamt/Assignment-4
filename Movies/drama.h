@@ -21,7 +21,7 @@ class Drama : public Movies {
         ~Drama();
 
         // Print out
-        void toString(ostream& stream) const;
+        void toString() const;
 };
 
 #endif

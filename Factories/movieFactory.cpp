@@ -39,7 +39,7 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     // Get Title
     getline(lineData, title, ',');
     // Get the rest of the data
-    getline(lineData, title, ',');
+    getline(lineData, data, ',');
 
     if (genre == 'F') {
         year = stoi(data);
@@ -54,7 +54,6 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
         string fname, lname;
         ss >> fname >> lname >> month >> year;
         actor = fname + " " + lname;
-
         newMovie = new Classics(stock, director, title, actor, month, year);
     }
 

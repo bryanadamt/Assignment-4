@@ -27,11 +27,10 @@ class Movies {
     string getTitle() const;
     int getYear() const;
 
+    virtual void toString() const = 0;
     protected:
         // The constructor is protected so it can't be declared
         Movies();
-
-        virtual void toString(ostream& stream) const = 0;
 
         int stock;
         string title;

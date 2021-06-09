@@ -29,7 +29,7 @@ class Classics : public Movies {
         string getMActor() const;
 
         // Print out
-        void toString(ostream& stream) const;
+        void toString() const;
     private:
         // month of release
         int month;

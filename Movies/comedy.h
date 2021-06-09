@@ -21,7 +21,7 @@ class Comedy : public Movies {
         ~Comedy();
 
         // Print out
-        void toString(ostream& stream) const;
+        void toString() const;
 };
 
 #endif
