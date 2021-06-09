@@ -12,7 +12,7 @@
 using namespace std;
 
 //---------------------------- movieMaker(stringstream&) -------------------------------------
-// Assign movie that was read from the file to one of the genres
+// Assign movie to one of the genres and fill it with the data
 Movies* MovieFactory::movieMaker(stringstream& lineData) {
     Movies *newMovie = NULL;
     // Temporary variable to store individual data
@@ -24,7 +24,8 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     genre = data[0];
 
     if (genre != 'F' && genre != 'D' && genre != 'C') {
-        cout << "invalid input detected" << endl;
+        cout << "invalid input detected " << genre;
+        cout << " is not a valid genre."<< endl;
         return NULL;
     }
 
@@ -40,22 +41,22 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     getline(lineData, title, ',');
     // Get the rest of the data
     getline(lineData, data, ',');
+
     if (genre == 'F') {
         year = stoi(data);
-        newMovie = new Comedy(stock, director, title, year);
+        newMovie = new Comedy(genre, stock, director, title, year);
     } 
     else if (genre == 'D') {
         year = stoi(data);
-        newMovie = new Drama(stock, director, title, year);
+        newMovie = new Drama(genre, stock, director, title, year);
     } 
     else if (genre == 'C') {
         stringstream ss(data);
         string fname, lname;
         ss >> fname >> lname >> month >> year;
         actor = fname + " " + lname;
-        newMovie = new Classics(stock, director, title, actor, month, year);
+        newMovie = new Classics(genre, stock, director, title, actor, month, year);
     }
 
     return newMovie;
-    // note deal with movie that has correct genre but incomplete data
 }

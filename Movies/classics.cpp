@@ -12,7 +12,8 @@ using namespace std;
 
 //---------------------------- Classics(int, string, string, string, int, int) -------------------------------------
 // Constructor
-Classics::Classics(int stock, string director, string title, string mActor, int month, int year) {
+Classics::Classics(char genre, int stock, string director, string title, 
+                    string mActor, int month, int year) {
     setStock(stock);
     setDirector(director);
     setTitle(title);

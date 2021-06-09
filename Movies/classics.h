@@ -16,7 +16,7 @@ using namespace std;
 class Classics : public Movies {
     public:
         // Constructor
-        Classics(int, string, string, string, int, int);
+        Classics(char, int, string, string, string, int, int);
 
         // Destructor
         ~Classics();

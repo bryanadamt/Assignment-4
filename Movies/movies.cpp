@@ -14,10 +14,17 @@ using namespace std;
 //---------------------------- Movies() -------------------------------------
 // Protected Constructor
 Movies::Movies() {
+    this->genre = '-';
     this->stock = 0;
     this->title = "";
     this->director = "";
     this->year = 0;
+}
+
+//---------------------------- setGenre(char) -------------------------------------
+// set the genre
+void Movies::setGenre(char newGenre) {
+    this->genre = newGenre;
 }
 
 //---------------------------- setStock(int) -------------------------------------
@@ -42,6 +49,12 @@ void Movies::setDirector(string newDirector) {
 // changes the year of a certain movie
 void Movies::setYear(int newYear) {
     this->year = newYear;
+}
+
+//---------------------------- getGenre() -------------------------------------
+// set the genre
+char Movies::getGenre() const {
+    return genre;
 }
 
 //---------------------------- getStock() -------------------------------------

@@ -12,7 +12,8 @@ using namespace std;
 
 //---------------------------- Drama(int, string, string, int) -------------------------------------
 // Constructor
-Drama::Drama(int stock, string director, string title, int year) {
+Drama::Drama(char genre, int stock, string director, string title, int year) {
+    setGenre(genre);
     setStock(stock);
     setDirector(director);
     setTitle(title);
