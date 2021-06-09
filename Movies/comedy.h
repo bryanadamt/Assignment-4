@@ -16,9 +16,12 @@ using namespace std;
 class Comedy : public Movies {
     public:
         // Constructor
-        Comedy(int, string, string, int);
+        Comedy(char, int, string, string, int);
         // Destructor
         ~Comedy();
+
+        // Print out
+        void toString() const;
 };
 
 #endif

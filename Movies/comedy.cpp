@@ -12,7 +12,8 @@ using namespace std;
 
 //---------------------------- Comedy(int, string, string, int) -------------------------------------
 // Constructor
-Comedy::Comedy(int stocks, string director, string title, int year) {
+Comedy::Comedy(char genre,int stock, string director, string title, int year) {
+    setGenre(genre);
     setStock(stock);
     setDirector(director);
     setTitle(title);
@@ -23,4 +24,10 @@ Comedy::Comedy(int stocks, string director, string title, int year) {
 // Destructor
 Comedy::~Comedy() {
 
+}
+
+//---------------------------- toString() -------------------------------------
+// Prints the object
+void Comedy::toString() const {
+    cout << getStock() << " " << getDirector() << " " << getTitle() << " " << getYear() << endl;
 }

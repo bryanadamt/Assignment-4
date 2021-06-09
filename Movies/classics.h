@@ -16,10 +16,20 @@ using namespace std;
 class Classics : public Movies {
     public:
         // Constructor
-        Classics(int, string, string, string, int, int);
+        Classics(char, int, string, string, string, int, int);
 
         // Destructor
         ~Classics();
+
+        // Setter and Getter
+        void setMonth(int);
+        void setMActor(string);
+
+        int getMonth() const;
+        string getMActor() const;
+
+        // Print out
+        void toString() const;
     private:
         // month of release
         int month;

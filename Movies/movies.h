@@ -7,6 +7,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -16,20 +17,24 @@ using namespace std;
 class Movies {
     public:
     // Setter and Getter functions
+    void setGenre(char);
     void setStock(int);
     void setDirector(string);
     void setTitle(string);
     void setYear(int);
 
+    char getGenre() const;
     int getStock() const;
     string getDirector() const;
     string getTitle() const;
     int getYear() const;
 
+    virtual void toString() const = 0;
     protected:
         // The constructor is protected so it can't be declared
         Movies();
 
+        char genre;
         int stock;
         string title;
         string director;
