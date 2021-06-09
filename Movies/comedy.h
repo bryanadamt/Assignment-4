@@ -19,6 +19,9 @@ class Comedy : public Movies {
         Comedy(int, string, string, int);
         // Destructor
         ~Comedy();
+
+        // Print out
+        void toString(ostream& stream) const;
 };
 
 #endif

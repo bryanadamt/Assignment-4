@@ -12,5 +12,20 @@
 
 using namespace std;
 int main() {
+    ifstream movieData("data4movies.txt");
+    if (!movieData) {
+		cout << "File could not be opened." << endl;
+		return -1;
+	}
+
+    MovieFactory m;
+    string line;
+    while (movieData >> line) {
+        stringstream ss(line);
+        Movies *newMovie = NULL;
+        newMovie = m.movieMaker(ss);
+        cout << newMovie << endl;
+    }
+
     return 0;
 }

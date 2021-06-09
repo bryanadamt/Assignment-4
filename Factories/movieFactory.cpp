@@ -61,7 +61,3 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     return newMovie;
     // note deal with movie that has correct genre but incomplete data
 }
-
-int main() {
-    return 0;
-}

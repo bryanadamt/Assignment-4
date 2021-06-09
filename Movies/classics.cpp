@@ -24,7 +24,7 @@ Classics::Classics(int stock, string director, string title, string mActor, int 
 //---------------------------- ~Classics() -------------------------------------
 // Destructor
 Classics::~Classics() {
-
+////////////////////////////// need destructor
 }
 
 //---------------------------- setMActor(string) -------------------------------------
@@ -49,4 +49,11 @@ int Classics::getMonth() const {
 // Gets the full name of the major actor
 string Classics::getMActor() const {
     return mActor;
+}
+
+//---------------------------- toString() -------------------------------------
+// Prints the object
+void Classics::toString(ostream& stream) const {
+    stream << getStock() << " " << getDirector() << " " << getTitle();
+    stream << getMActor() << " " << getMonth() << " " << getYear();
 }

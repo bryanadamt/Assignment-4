@@ -17,9 +17,11 @@ class Drama : public Movies {
     public:
         // Constructor
         Drama(int, string, string, int);
-
         // Destructor
         ~Drama();
+
+        // Print out
+        void toString(ostream& stream) const;
 };
 
 #endif

@@ -7,6 +7,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 #include <iostream>
+#include <fstream>
 
 using namespace std;
 
@@ -29,6 +30,8 @@ class Movies {
     protected:
         // The constructor is protected so it can't be declared
         Movies();
+
+        virtual void toString(ostream& stream) const = 0;
 
         int stock;
         string title;
