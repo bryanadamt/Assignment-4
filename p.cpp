@@ -11,7 +11,6 @@
 
 using namespace std;
 int main() {
-    cout << "a";
     ifstream movieData("data4movies.txt");
     if (!movieData) {
 		cout << "File could not be opened." << endl;
@@ -20,7 +19,6 @@ int main() {
 
     MovieFactory m;
     string line;
-    cout << "a";
     while (getline(movieData, line)) {
         stringstream ss(line);
         Movies *newMovie = NULL;
