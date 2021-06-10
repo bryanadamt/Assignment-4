@@ -35,7 +35,7 @@ class BSTree {
         // Helper Functions
 	    void makeEmptyHelper(Node *&);
         bool insertHelper(Node *&, Movies *&);
-	    void retrieveHelper(const Movies &, Movies *&, Node *) const;
+	    void retrieveHelper(const Movies *, Movies *&, Node *) const;
 };
 
 #endif

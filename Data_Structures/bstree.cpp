@@ -82,7 +82,7 @@ bool BSTree::insertHelper(Node*& curr, Movies*& toInsert)
 // Preconditions: There has to be a Movie object
 // Postconditions: address is updated with the address of the 
 //  			   Movie if it's found.
-bool BinTree::retrieve(const Movie &toFind, Movie *&address) const
+bool BSTree::retrieve(const Movies *toFind, Movies *&address) const
 {
 	retrieveHelper(toFind, address, root);
 	return (address != NULL);
@@ -93,7 +93,7 @@ bool BinTree::retrieve(const Movie &toFind, Movie *&address) const
 // Preconditions: There has to be a Movie object
 // Postconditions: address is updated with the address of the 
 //  			   Movie if it's found.
-void BinTree::retrieveHelper(const Movie &toFind, Movie *&address, Node *curr) const
+void BSTree::retrieveHelper(const Movies *toFind, Movies *&address, Node *curr) const
 {
 	// if (curr != NULL) {
 	// 	if (*curr->data == toFind) {
