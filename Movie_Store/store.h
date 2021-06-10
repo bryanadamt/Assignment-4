@@ -16,15 +16,16 @@
 #ifndef STORE_H
 #define STORE_H
 
-const int GENRES = 3;
 class Store {
     public:
         // Read the entire movie file
         void readMovieData(ifstream&);
+
+        BSTree comedy;
     private:
         // Queue transactions;
         BSTree classics;
-        BSTree comedy;
+        //BSTree comedy;
         BSTree drama;
         MovieFactory mFactory;
 };

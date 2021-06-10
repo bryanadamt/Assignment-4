@@ -80,3 +80,16 @@ string Movies::getDirector() const {
 int Movies::getYear() const {
     return year;
 }
+
+
+//---------------------------- getMonth() -------------------------------------
+// Gets the month of a classic movie
+int Movies::getMonth() const {
+    return month;
+}
+
+//---------------------------- getMActor() -------------------------------------
+// Gets the full name of the major actor
+string Movies::getMActor() const {
+    return mActor;
+}

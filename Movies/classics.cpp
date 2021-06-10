@@ -40,18 +40,6 @@ void Classics::setMonth(int newMonth) {
     month = newMonth;
 }
 
-//---------------------------- getMonth() -------------------------------------
-// Gets the month of a classic movie
-int Classics::getMonth() const {
-    return month;
-}
-
-//---------------------------- getMActor() -------------------------------------
-// Gets the full name of the major actor
-string Classics::getMActor() const {
-    return mActor;
-}
-
 //---------------------------- operator== -------------------------------------
 // Overload equality operator
 // Preconditions: There has to be 2 Classics objects
@@ -59,7 +47,7 @@ string Classics::getMActor() const {
 bool Classics::operator==(const Movies &toCompare) const {
         return (year == toCompare.getYear() &&
                 month == toCompare.getMonth() && 
-                mActor == toCompare.getMajorActor());
+                mActor == toCompare.getMActor());
 }
 
 //---------------------------- operator> -------------------------------------
@@ -72,7 +60,7 @@ bool Classics::operator>(const Movies &toCompare) const {
     } else if (month != toCompare.getMonth()) {
         return month > toCompare.getMonth();
     }
-    return mActor > toCompare.getMajorActor();
+    return mActor > toCompare.getMActor();
 }
 
 //---------------------------- operator< -------------------------------------
@@ -85,7 +73,7 @@ bool Classics::operator<(const Movies &toCompare) const {
     } else if (month != toCompare.getMonth()) {
         return month < toCompare.getMonth();
     }
-    return mActor < toCompare.getMajorActor();
+    return mActor < toCompare.getMActor();
 }
 
 //---------------------------- toString() -------------------------------------
