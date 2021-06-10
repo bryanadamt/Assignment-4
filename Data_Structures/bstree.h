@@ -23,6 +23,7 @@ class BSTree {
         // Retrieve
         bool retrieve(const Movies*, Movies *&) const;
         // Display BSTree Inorder
+        void displayInOrder() const;
     private:
         struct Node{
             Movies* movie;
@@ -36,6 +37,7 @@ class BSTree {
 	    void makeEmptyHelper(Node *&);
         bool insertHelper(Node *&, Movies *&);
 	    void retrieveHelper(const Movies *, Movies *&, Node *) const;
+        void displayHelper(Node*) const;
 };
 
 #endif

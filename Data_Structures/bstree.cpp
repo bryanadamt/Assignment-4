@@ -27,7 +27,7 @@ void BSTree::makeEmpty() {
 	makeEmptyHelper(root);
 }
 
-//---------------------------- makeEmptyHelper() -------------------------------------
+//---------------------------- makeEmptyHelper(Node*&) -------------------------------------
 // Helper function to makeEmpty
 // Preconditions: There has to be a BSTree
 // Postconditions: BSTree deleted
@@ -43,23 +43,21 @@ void BSTree::makeEmptyHelper(Node*& curNode) {
 	}
 }
 
-//---------------------------- insert() -------------------------------------
+//---------------------------- insert(Movies*) -------------------------------------
 // Inserts a new Node to the BSTree
-// Preconditions: There has to be a Node object
+// Preconditions: There has to be a Movies object
 // Postconditions: BSTree is changed if a new Node is inserted
 // 				   stays the same if it doesn't
-bool BSTree::insert(Movies* toInsert) 
-{
+bool BSTree::insert(Movies* toInsert) {
 	return insertHelper(root, toInsert);
 }
 
-//---------------------------- insertHelper() -------------------------------------
+//---------------------------- insertHelper(Node*&, Movies*&) -------------------------------------
 // Helper function to insert
-// Preconditions: There has to be a Movie object
+// Preconditions: There has to be a Movies object
 // Postconditions: BSTree is changed if a new Node is inserted
 // 				   stays the same if it doesn't
-bool BSTree::insertHelper(Node*& curr, Movies*& toInsert) 
-{
+bool BSTree::insertHelper(Node*& curr, Movies*& toInsert) {
 	if (curr == NULL) {
 		curr = new Node;
 		curr->movie = toInsert;
@@ -76,25 +74,23 @@ bool BSTree::insertHelper(Node*& curr, Movies*& toInsert)
 	return true;
 }
 
-//---------------------------- retrieve() -------------------------------------
+//---------------------------- retrieve(Movies*, Movies*&) -------------------------------------
 // Retrieve the Movie* of a given object in the tree (via pass-by-reference parameter)
 // and to report whether the object is found (true or false).
-// Preconditions: There has to be a Movie object
+// Preconditions: There has to be a Movies object
 // Postconditions: address is updated with the address of the 
-//  			   Movie if it's found.
-bool BSTree::retrieve(const Movies *toFind, Movies *&address) const
-{
+//  			   Movies if it's found.
+bool BSTree::retrieve(const Movies *toFind, Movies *&address) const {
 	retrieveHelper(toFind, address, root);
 	return (address != NULL);
 }
 
-//---------------------------- retrieveHelper() -------------------------------------
+//---------------------------- retrieveHelperMovies*, Movies*&, Node*) -------------------------------------
 // Helper Fucntion to retrieve function
 // Preconditions: There has to be a Movie object
 // Postconditions: address is updated with the address of the 
 //  			   Movie if it's found.
-void BSTree::retrieveHelper(const Movies *toFind, Movies *&address, Node *curr) const
-{
+void BSTree::retrieveHelper(const Movies *toFind, Movies *&address, Node *curr) const {
 	if (curr != NULL) {
 		if (*curr->movie == *toFind) {
 			address = curr->movie;
@@ -106,6 +102,26 @@ void BSTree::retrieveHelper(const Movies *toFind, Movies *&address, Node *curr) 
 	} else {
 		address = NULL;
 	}
+}
+
+//---------------------------- displayInOrder() -------------------------------------
+// Display the Tree in Order
+// Preconditions: None
+// Postconditions: Bstree is unchanged and pritned in order traversal
+void BSTree::displayInOrder() {
+	displayHelper(root);
+}
+
+//---------------------------- displayHelper(Node*) -------------------------------------
+// Display the Tree in Order
+// Preconditions: None
+// Postconditions: Bstree is unchanged and pritned in order traversal
+void BSTree::displayHelper(Node* curr) {
+	if (curr != NULL) {
+		displayHelper(curr->left);
+		curr.toString();
+		displayHelper(curr->right);
+	} 
 }
 
 int main() {
