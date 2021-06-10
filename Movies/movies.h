@@ -34,9 +34,9 @@ class Movies {
     int getYear() const;
 
     // Operators
-    virtual bool operator==(const Movies&) = 0;
-    virtual bool operator>(const Movies&) = 0;
-    virtual bool operator<(const Movies&) = 0;
+    virtual bool operator==(const Movies&) const = 0;
+    virtual bool operator>(const Movies&) const = 0;
+    virtual bool operator<(const Movies&) const = 0;
 
     virtual void toString() const = 0;
     protected:
