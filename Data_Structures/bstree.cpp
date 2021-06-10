@@ -60,19 +60,19 @@ bool BSTree::insert(Movies* toInsert)
 // 				   stays the same if it doesn't
 bool BSTree::insertHelper(Node*& curr, Movies*& toInsert) 
 {
-	// if (curr == NULL) {
-	// 	curr = new Node;
-	// 	curr->movie = toInsert;
-	// 	curr->left = NULL;
-	// 	curr->right = NULL;
-	// 	return true;
-	// } else if (*curr->movie == *toInsert) {
-	// 	return false;
-	// } else if (*curr->movie > *toInsert) {
-	// 	insertHelper(curr->left, toInsert);
-	// } else if (*curr->movie < *toInsert) {
-	// 	insertHelper(curr->right, toInsert);
-	// }
+	if (curr == NULL) {
+		curr = new Node;
+		curr->movie = toInsert;
+		curr->left = NULL;
+		curr->right = NULL;
+		return true;
+	} else if (*curr->movie == *toInsert) {
+		return false;
+	} else if (*curr->movie > *toInsert) {
+		insertHelper(curr->left, toInsert);
+	} else if (*curr->movie < *toInsert) {
+		insertHelper(curr->right, toInsert);
+	}
 	return true;
 }
 
@@ -95,17 +95,17 @@ bool BSTree::retrieve(const Movies *toFind, Movies *&address) const
 //  			   Movie if it's found.
 void BSTree::retrieveHelper(const Movies *toFind, Movies *&address, Node *curr) const
 {
-	// if (curr != NULL) {
-	// 	if (*curr->data == toFind) {
-	// 		address = curr->data;
-	// 	} else if (*curr->data < toFind) {
-	// 		retrieveHelper(toFind, address, curr->right);
-	// 	} else {
-	// 		retrieveHelper(toFind, address, curr->left);
-	// 	}
-	// } else {
-	// 	address = NULL;
-	// }
+	if (curr != NULL) {
+		if (*curr->movie == *toFind) {
+			address = curr->movie;
+		} else if (*curr->movie < *toFind) {
+			retrieveHelper(toFind, address, curr->right);
+		} else {
+			retrieveHelper(toFind, address, curr->left);
+		}
+	} else {
+		address = NULL;
+	}
 }
 
 int main() {
