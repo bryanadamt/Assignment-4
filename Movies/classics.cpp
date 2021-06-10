@@ -57,8 +57,9 @@ string Classics::getMActor() const {
 // Preconditions: There has to be 2 Classics objects
 // Postconditions: Classics is unchanged
 bool Classics::operator==(const Movies &toCopy) const {
-    // Compare accordingly
-	return true;
+        return (year == toCompare.getYear() &&
+                month == toCompare.getMonth() && 
+                mActor == toCompare.getMajorActor());
 }
 
 //---------------------------- operator> -------------------------------------
@@ -66,8 +67,12 @@ bool Classics::operator==(const Movies &toCopy) const {
 // Preconditions: There has to be 2 Classics objects
 // Postconditions: Classics is unchanged
 bool Classics::operator>(const Movies &toCopy) const {
-    // Compare accordingly
-	return true;
+    if (year != toCompare.getYear()) {
+        return year > toCompare.getYear();
+    } else if (month != toCompare.getMonth()) {
+        return month > toCompare.getMonth();
+    }
+    return mActor > toCompare.getMajorActor();
 }
 
 //---------------------------- operator< -------------------------------------

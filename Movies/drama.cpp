@@ -30,27 +30,30 @@ Drama::~Drama() {
 // Overload equality operator
 // Preconditions: There has to be 2 Drama objects
 // Postconditions: Drama is unchanged
-bool Drama::operator==(const Movies &toCopy) const {
-    // Compare accordingly
-	return true;
+bool Drama::operator==(const Movies &toCompare) const {
+	return (director == toCompare.getDirector() && title == toCompare.getTitle());
 }
 
 //---------------------------- operator> -------------------------------------
 // Overload more than operator
 // Preconditions: There has to be 2 Drama objects
 // Postconditions: Drama is unchanged
-bool Drama::operator>(const Movies &toCopy) const {
-    // Compare accordingly
-	return true;
+bool Drama::operator>(const Movies &toCompare) const {
+    if (director != toCompare.getDirector()) {
+        return director > toCompare.getDirector();
+    }
+	return title > toCompare.getTitle();
 }
 
 //---------------------------- operator< -------------------------------------
 // Overload less than operator
 // Preconditions: There has to be 2 Drama objects
 // Postconditions: Drama is unchanged
-bool Drama::operator<(const Movies &toCopy) const {
-    // Compare accordingly
-	return true;
+bool Drama::operator<(const Movies &toCompare) const {
+    if (director != toCompare.getDirector()) {
+        return director < toCompare.getDirector();
+    }
+	return title < toCompare.getTitle();
 }
 
 //---------------------------- toString() -------------------------------------

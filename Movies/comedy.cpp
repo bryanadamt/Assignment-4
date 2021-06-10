@@ -30,27 +30,30 @@ Comedy::~Comedy() {
 // Overload equality operator
 // Preconditions: There has to be 2 Comedy objects
 // Postconditions: Comedy is unchanged
-bool Comedy::operator==(const Movies &toCopy) const {
-    // Compare accordingly
-	return true;
+bool Comedy::operator==(const Movies &toCompare) const {
+	return (title == toCompare.getTitle() && year == toCompare.getYear());
 }
 
 //---------------------------- operator> -------------------------------------
 // Overload more than operator
 // Preconditions: There has to be 2 Comedy objects
 // Postconditions: Comedy is unchanged
-bool Comedy::operator>(const Movies &toCopy) const {
-    // Compare accordingly
-	return true;
+bool Comedy::operator>(const Movies &toCompare) const {
+    if (title != toCompare.getTitle()) {
+        return title > toCompare.getTitle();
+    }
+	return year > toCompare.getYear();
 }
 
 //---------------------------- operator< -------------------------------------
 // Overload less than operator
 // Preconditions: There has to be 2 Comedy objects
 // Postconditions: Comedy is unchanged
-bool Comedy::operator<(const Movies &toCopy) const {
-    // Compare accordingly
-	return true;
+bool Comedy::operator<(const Movies &toCompare) const {
+    if (title != toCompare.getTitle()) {
+        return title < toCompare.getTitle();
+    }
+	return year < toCompare.getYear();
 }
 
 //---------------------------- toString() -------------------------------------
