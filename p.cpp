@@ -12,18 +12,11 @@ int main() {
     Store stores;
     stores.readMovieData(movieData);
 
-    stores.comedy.displayInOrder();/////////////
-
-    // MovieFactory m;
-    // string line;
-    // while (getline(movieData, line)) {
-    //     stringstream ss(line);
-    //     Movies *newMovie = NULL;
-    //     newMovie = m.movieMaker(ss);
-    //     if (newMovie != NULL) {
-    //         newMovie->toString();
-    //     }
-    // }
+    stores.comedy.displayInOrder();
+    cout << endl;
+    stores.classics.displayInOrder();
+    cout << endl;
+    stores.drama.displayInOrder();
 
     return 0;
 }

@@ -24,7 +24,7 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     genre = data[0];
 
     if (genre != 'F' && genre != 'D' && genre != 'C') {
-        cout << "invalid input detected " << genre;
+        cout << "Invalid input detected " << genre;
         cout << " is not a valid genre."<< endl;
         return NULL;
     }
