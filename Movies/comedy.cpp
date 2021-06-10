@@ -26,6 +26,36 @@ Comedy::~Comedy() {
 
 }
 
+//---------------------------- operator== -------------------------------------
+// Overload equality operator
+// Preconditions: There has to be 2 Comedy objects
+// Postconditions: Comedy is unchanged
+bool Comedy::operator==(const Comedy &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
+//---------------------------- operator> -------------------------------------
+// Overload more than operator
+// Preconditions: There has to be 2 Comedy objects
+// Postconditions: Comedy is unchanged
+bool Comedy::operator>(const Comedy &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
+//---------------------------- operator< -------------------------------------
+// Overload less than operator
+// Preconditions: There has to be 2 Comedy objects
+// Postconditions: Comedy is unchanged
+bool Comedy::operator<(const Comedy &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
 //---------------------------- toString() -------------------------------------
 // Prints the object
 void Comedy::toString() const {

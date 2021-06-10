@@ -26,6 +26,36 @@ Drama::~Drama() {
 
 }
 
+//---------------------------- operator== -------------------------------------
+// Overload equality operator
+// Preconditions: There has to be 2 Drama objects
+// Postconditions: Drama is unchanged
+bool Drama::operator==(const Drama &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
+//---------------------------- operator> -------------------------------------
+// Overload more than operator
+// Preconditions: There has to be 2 Drama objects
+// Postconditions: Drama is unchanged
+bool Drama::operator>(const Drama &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
+//---------------------------- operator< -------------------------------------
+// Overload less than operator
+// Preconditions: There has to be 2 Drama objects
+// Postconditions: Drama is unchanged
+bool Drama::operator<(const Drama &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
 //---------------------------- toString() -------------------------------------
 // Prints the object
 void Drama::toString() const {

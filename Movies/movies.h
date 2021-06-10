@@ -29,6 +29,11 @@ class Movies {
     string getTitle() const;
     int getYear() const;
 
+    // Operators
+    virtual bool operator==(const Movies&) = 0;
+    virtual bool operator>(const Movies&) = 0;
+    virtual bool operator<(const Movies&) = 0;
+
     virtual void toString() const = 0;
     protected:
         // The constructor is protected so it can't be declared

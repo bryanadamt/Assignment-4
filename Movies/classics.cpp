@@ -52,6 +52,36 @@ string Classics::getMActor() const {
     return mActor;
 }
 
+//---------------------------- operator== -------------------------------------
+// Overload equality operator
+// Preconditions: There has to be 2 Classics objects
+// Postconditions: Classics is unchanged
+bool Classics::operator==(const Classics &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
+//---------------------------- operator> -------------------------------------
+// Overload more than operator
+// Preconditions: There has to be 2 Classics objects
+// Postconditions: Classics is unchanged
+bool Classics::operator>(const Classics &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
+//---------------------------- operator< -------------------------------------
+// Overload less than operator
+// Preconditions: There has to be 2 Classics objects
+// Postconditions: Classics is unchanged
+bool Classics::operator<(const Classics &toCopy) const 
+{
+    // Compare accordingly
+	return true;
+}
+
 //---------------------------- toString() -------------------------------------
 // Prints the object
 void Classics::toString() const {
