@@ -28,6 +28,11 @@ class Classics : public Movies {
         int getMonth() const;
         string getMActor() const;
 
+        // Operators
+        bool operator==(const Movies&) const;
+        bool operator>(const Movies&) const;
+        bool operator<(const Movies&) const;
+
         // Print out
         void toString() const;
     private:

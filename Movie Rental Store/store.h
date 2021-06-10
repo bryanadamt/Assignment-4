@@ -11,6 +11,7 @@
 #include "../Movies/comedy.h"
 #include "../Movies/drama.h"
 #include "../Factories/movieFactory.h"
+#include "../Data_Structures/bstree.h"
 
 #ifndef STORE_H
 #define STORE_H
@@ -22,7 +23,9 @@ class Store {
         void readMovieData(ifstream&);
     private:
         // Queue transactions;
-        // Bstree movies[GENRES];
+        BSTree classics;
+        BSTree comedy;
+        BSTree drama;
         MovieFactory mFactory;
 };
 #endif

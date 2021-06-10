@@ -12,7 +12,7 @@
 using namespace std;
 
 //---------------------------- movieMaker(stringstream&) -------------------------------------
-// Assign movie to one of the genres and fill it with the data
+// Takes a line from the file and create a movie object based on the data
 Movies* MovieFactory::movieMaker(stringstream& lineData) {
     Movies *newMovie = NULL;
     // Temporary variable to store individual data
@@ -45,12 +45,10 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     if (genre == 'F') {
         year = stoi(data);
         newMovie = new Comedy(genre, stock, director, title, year);
-    } 
-    else if (genre == 'D') {
+    } else if (genre == 'D') {
         year = stoi(data);
         newMovie = new Drama(genre, stock, director, title, year);
-    } 
-    else if (genre == 'C') {
+    } else if (genre == 'C') {
         stringstream ss(data);
         string fname, lname;
         ss >> fname >> lname >> month >> year;

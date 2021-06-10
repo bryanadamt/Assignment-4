@@ -1,9 +1,8 @@
-
-#include "Movies/movies.h"
 #include "Movies/classics.h"
 #include "Movies/comedy.h"
 #include "Movies/drama.h"
 #include "Factories/movieFactory.h"
+#include "Data_Structures/bstree.h"
 
 #include <sstream>
 #include <iostream>
@@ -12,6 +11,7 @@
 
 using namespace std;
 int main() {
+    cout << "a";
     ifstream movieData("data4movies.txt");
     if (!movieData) {
 		cout << "File could not be opened." << endl;
@@ -20,6 +20,7 @@ int main() {
 
     MovieFactory m;
     string line;
+    cout << "a";
     while (getline(movieData, line)) {
         stringstream ss(line);
         Movies *newMovie = NULL;

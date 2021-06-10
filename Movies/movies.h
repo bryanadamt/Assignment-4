@@ -14,6 +14,10 @@ using namespace std;
 #ifndef MOVIES_H
 #define MOVIES_H
 
+// Check for movies that are the same, like same title but different actor
+// etc. and then connect them both so if one of them is searched,
+// both of them will change. They both point to the same thing.
+
 class Movies {
     public:
     // Setter and Getter functions
@@ -28,6 +32,11 @@ class Movies {
     string getDirector() const;
     string getTitle() const;
     int getYear() const;
+
+    // Operators
+    virtual bool operator==(const Movies&) const = 0;
+    virtual bool operator>(const Movies&) const = 0;
+    virtual bool operator<(const Movies&) const = 0;
 
     virtual void toString() const = 0;
     protected:

@@ -20,6 +20,11 @@ class Comedy : public Movies {
         // Destructor
         ~Comedy();
 
+        // Operators
+        bool operator==(const Movies&) const;
+        bool operator>(const Movies&) const;
+        bool operator<(const Movies&) const;
+
         // Print out
         void toString() const;
 };
