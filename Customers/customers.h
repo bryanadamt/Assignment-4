@@ -10,13 +10,15 @@
 #define CUSTOMER_H
 
 #include <fstream>
-#include "../Data Structures/bstree.h"
+#include "../Data_Structures/bstree.h"
 
 using namespace std;
 
 class Customers {
 
-    public:
+    friend ostream& operator<<(ostream& stream, const Customers& customer);
+
+public:
 
     // set the customer
     bool setCustomer(ifstream &infile);
@@ -35,13 +37,13 @@ class Customers {
     string getFirstN() const;
     string getLastN() const;
 
-    private:
-        // Unique Id Number
-        int customerID;
-        // first name
-        string firstN;
-        // last name
-        string lastN;
+private:
+    // Unique Id Number
+    int customerID;
+    // first name
+    string firstN;
+    // last name
+    string lastN;
 };
 
 #endif
