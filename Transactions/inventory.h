@@ -16,10 +16,14 @@ using namespace std;
 
 class Inventory : public Transactions {
 
-    public:
+public:
+
+    void doTrans(BST movies[], HashTable &customers);
+    bool setData(ifstream& infile, char transactionType);
 
 
-    private:
+private:
+    string getString() const;
 
 };
 

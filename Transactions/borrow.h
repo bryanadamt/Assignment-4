@@ -10,17 +10,23 @@
 #define BORROW_H
 
 #include "transactions.h"
-
+#include "../Movies/movies.h"
+#include "../Factories/movieFactory.h"
 
 using namespace std;
 
 class Borrow : public Transactions {
 
-    public:
+public:
+
+    void doTrans(BST movies[], HashTable &customers);
+    bool setData(ifstream& infile, char transactionType);
 
 
-    private:
-
+private:
+    string getString() const;
+    string movieTitle;
+    MovieFactory movieFactory;
 };
 
 #endif

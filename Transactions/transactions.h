@@ -16,29 +16,32 @@ using namespace std;
 
 class Transactions {
 
-    public:
-        virtual void doTrans();
-        virtual bool setData();
-        virtual string getString() const = 0;
+public:
 
-        // getters and setters
-        char getTransationType() const;
-        int getCustomersID() const;
-        char getFormat() const;
-        //Movies* getMovie() const;
+    virtual void doTrans(BST movies[], HashTable &customers) = 0;
+    virtual bool setData(ifstream& infile, char transactionType) = 0;
+    virtual string getString() const = 0;
+
+    // getters and setters
+    char getTransationType() const;
+    int getCustomersID() const;
+    char getFormat() const;
+    Movies* getMovie() const;
 
 
-        void setTransactionType(char transactionType);
-        void setCusomersID(int customerID);
-        void setFormat(char format);
-        //void setMovie(Movies* movie);
+    void setTransactionType(char transactionType);
+    void setCusomersID(int customerID);
+    void setFormat(char format);
+    void setMovie(Movies* movie);
 
-    private:
-        int customerID;
-        char transactionType;
-        char genre;
-        char format;
-        //Movies* movie;
+
+private:
+
+    int customerID;
+    char transactionType;
+    char genre;
+    char format;
+    Movies* movie;
 
 };
 
