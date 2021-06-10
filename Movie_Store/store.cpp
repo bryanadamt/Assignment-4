@@ -30,8 +30,8 @@ void Store::readMovieData(ifstream& movieData) {
         if (newMovie == NULL) {
             continue;
         }
-
-        //newMovie->toString();
+        // cout << newMovie->getGenre(); //found it
+        // newMovie->toString();
 
         if (newMovie->getGenre() == 'F') {
             comedy.insert(newMovie);

@@ -56,8 +56,8 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
         ss >> fname >> lname >> month >> year;
         actor = fname + " " + lname;
         newMovie = new Classics(genre, stock, director, title, actor, month, year);
-        newMovie->toString();
     }
 
+    cout << newMovie->getGenre();
     return newMovie;
 }
