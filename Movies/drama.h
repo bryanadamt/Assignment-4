@@ -21,9 +21,9 @@ class Drama : public Movies {
         ~Drama();
 
         // Operators
-        bool operator==(const Drama&) const;
-        bool operator>(const Drama&) const;
-        bool operator<(const Drama&) const;
+        bool operator==(const Movies&);
+        bool operator>(const Movies&);
+        bool operator<(const Movies&);
 
         // Print out
         void toString() const;

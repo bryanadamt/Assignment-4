@@ -30,8 +30,7 @@ Comedy::~Comedy() {
 // Overload equality operator
 // Preconditions: There has to be 2 Comedy objects
 // Postconditions: Comedy is unchanged
-bool Comedy::operator==(const Comedy &toCopy) const 
-{
+bool Comedy::operator==(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }
@@ -40,8 +39,7 @@ bool Comedy::operator==(const Comedy &toCopy) const
 // Overload more than operator
 // Preconditions: There has to be 2 Comedy objects
 // Postconditions: Comedy is unchanged
-bool Comedy::operator>(const Comedy &toCopy) const 
-{
+bool Comedy::operator>(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }
@@ -50,8 +48,7 @@ bool Comedy::operator>(const Comedy &toCopy) const
 // Overload less than operator
 // Preconditions: There has to be 2 Comedy objects
 // Postconditions: Comedy is unchanged
-bool Comedy::operator<(const Comedy &toCopy) const 
-{
+bool Comedy::operator<(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }

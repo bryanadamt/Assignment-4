@@ -56,8 +56,7 @@ string Classics::getMActor() const {
 // Overload equality operator
 // Preconditions: There has to be 2 Classics objects
 // Postconditions: Classics is unchanged
-bool Classics::operator==(const Classics &toCopy) const 
-{
+bool Classics::operator==(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }
@@ -66,8 +65,7 @@ bool Classics::operator==(const Classics &toCopy) const
 // Overload more than operator
 // Preconditions: There has to be 2 Classics objects
 // Postconditions: Classics is unchanged
-bool Classics::operator>(const Classics &toCopy) const 
-{
+bool Classics::operator>(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }
@@ -76,8 +74,7 @@ bool Classics::operator>(const Classics &toCopy) const
 // Overload less than operator
 // Preconditions: There has to be 2 Classics objects
 // Postconditions: Classics is unchanged
-bool Classics::operator<(const Classics &toCopy) const 
-{
+bool Classics::operator<(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }

@@ -30,8 +30,7 @@ Drama::~Drama() {
 // Overload equality operator
 // Preconditions: There has to be 2 Drama objects
 // Postconditions: Drama is unchanged
-bool Drama::operator==(const Drama &toCopy) const 
-{
+bool Drama::operator==(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }
@@ -40,8 +39,7 @@ bool Drama::operator==(const Drama &toCopy) const
 // Overload more than operator
 // Preconditions: There has to be 2 Drama objects
 // Postconditions: Drama is unchanged
-bool Drama::operator>(const Drama &toCopy) const 
-{
+bool Drama::operator>(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }
@@ -50,8 +48,7 @@ bool Drama::operator>(const Drama &toCopy) const
 // Overload less than operator
 // Preconditions: There has to be 2 Drama objects
 // Postconditions: Drama is unchanged
-bool Drama::operator<(const Drama &toCopy) const 
-{
+bool Drama::operator<(const Movies &toCopy) {
     // Compare accordingly
 	return true;
 }

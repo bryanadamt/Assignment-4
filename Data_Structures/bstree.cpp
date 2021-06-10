@@ -108,7 +108,7 @@ void BSTree::retrieveHelper(const Movies *toFind, Movies *&address, Node *curr) 
 // Display the Tree in Order
 // Preconditions: None
 // Postconditions: Bstree is unchanged and pritned in order traversal
-void BSTree::displayInOrder() {
+void BSTree::displayInOrder() const {
 	displayHelper(root);
 }
 
@@ -116,14 +116,10 @@ void BSTree::displayInOrder() {
 // Display the Tree in Order
 // Preconditions: None
 // Postconditions: Bstree is unchanged and pritned in order traversal
-void BSTree::displayHelper(Node* curr) {
+void BSTree::displayHelper(Node* curr) const {
 	if (curr != NULL) {
 		displayHelper(curr->left);
-		curr.toString();
+		curr->movie->toString();
 		displayHelper(curr->right);
 	} 
-}
-
-int main() {
-	return 0;
 }

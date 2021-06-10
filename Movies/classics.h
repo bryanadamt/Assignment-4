@@ -29,9 +29,9 @@ class Classics : public Movies {
         string getMActor() const;
 
         // Operators
-        bool operator==(const Classics&) const;
-        bool operator>(const Classics&) const;
-        bool operator<(const Classics&) const;
+        bool operator==(const Movies&);
+        bool operator>(const Movies&);
+        bool operator<(const Movies&);
 
         // Print out
         void toString() const;
