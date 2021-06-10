@@ -12,11 +12,11 @@ int main() {
     Store stores;
     stores.readMovieData(movieData);
 
-    stores.comedy.displayInOrder();
+    //stores.comedy.displayInOrder();
     cout << endl;
-    stores.classics.displayInOrder();
+    //stores.classics.displayInOrder();
     cout << endl;
-    stores.drama.displayInOrder();
+    //stores.drama.displayInOrder();
 
     return 0;
 }

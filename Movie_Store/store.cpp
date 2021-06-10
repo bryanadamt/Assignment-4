@@ -31,6 +31,8 @@ void Store::readMovieData(ifstream& movieData) {
             continue;
         }
 
+        //newMovie->toString();
+
         if (newMovie->getGenre() == 'F') {
             comedy.insert(newMovie);
         } else if (newMovie->getGenre() == 'D') {

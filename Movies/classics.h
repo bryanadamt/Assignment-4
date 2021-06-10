@@ -24,6 +24,10 @@ class Classics : public Movies {
         // Setter
         void setMonth(int);
         void setMActor(string);
+
+        int getMonth() const;
+        string getMActor() const;
+
         
         // Operators
         bool operator==(const Movies&) const;

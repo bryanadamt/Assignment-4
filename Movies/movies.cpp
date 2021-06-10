@@ -18,6 +18,8 @@ Movies::Movies() {
     this->stock = 0;
     this->title = "";
     this->director = "";
+    this->mActor = "";
+    this->month = 0;
     this->year = 0;
 }
 

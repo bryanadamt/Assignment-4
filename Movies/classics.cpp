@@ -40,6 +40,18 @@ void Classics::setMonth(int newMonth) {
     month = newMonth;
 }
 
+//---------------------------- getMonth() -------------------------------------
+// Gets the month of a classic movie
+int Classics::getMonth() const {
+    return month;
+}
+
+//---------------------------- getMActor() -------------------------------------
+// Gets the full name of the major actor
+string Classics::getMActor() const {
+    return mActor;
+}
+
 //---------------------------- operator== -------------------------------------
 // Overload equality operator
 // Preconditions: There has to be 2 Classics objects
