@@ -64,6 +64,18 @@ void Customers::getHistory(){
 
 }
 
+//---------------------------- operator<<(ostream& stream, const Customers& customer)---------------------------------
+// print out the Customer's name, followed by their Iy
+//---------------------------------------------------------------------------
+
+ostream& operator<<(ostream& stream, const Customers& customer){
+
+    stream << customer.getFirstN() << " " 
+           << customer.getLastN() << " (ID: " 
+           << customer.getCustomerID() << ")";
+
+    return stream;
+}
 
 //---------------------------- getters and setters() --------------------------------
 // returns the customer's ID, first name, and last name from the file
