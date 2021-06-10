@@ -14,6 +14,7 @@ using namespace std;
 // Constructor
 Classics::Classics(char genre, int stock, string director, string title, 
                     string mActor, int month, int year) {
+    setGenre(genre);
     setStock(stock);
     setDirector(director);
     setTitle(title);
