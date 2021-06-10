@@ -23,30 +23,29 @@ HashTable::HashTable(){
 //---------------------------- ~HashTable() --------------------------------
 HashTable::~HashTable(){
 
-    // create a current to hold nodes in the lists of the hashtable
+    // create a current node
     node* current;
 
     // go through the whole array
     for(int i = 0; i < MAXHASHSIZE; i++){
 
-        // for each list, traverse the whole list
+        // traverse the whole list
         while(array[i] != nullptr){
 
-            // capture the node at the front and move the head of the list
-            // forward
+            // capture the node at the front, move the head of the list forward
             current = array[i];
             array[i] = array[i]->next;
 
-            // delete the data of the node
+            // delete the node data
             delete current->data;
             current->data = nullptr;
 
-            // delete the node itself
+            // delete the node
             delete current;
 
         }
 
-        // dereference the bucket from the list to prevent dangling references
+        // dereference the array from the list
         array[i] = nullptr;
     }
 }
@@ -56,20 +55,20 @@ HashTable::~HashTable(){
 
 bool HashTable::retrieveCustomer(int customerID, Customers*& foundCustomer) {
 
-    // hash the ID of the customer
+    // hash the customer's ID
     int IDHash = hash(customerID);
 
-    //p oint to the list in the specified bucket defined by the hashed ID integer
+    // point to the list in the specified array defined by the hashed ID number
     node* current = array[IDHash];
 
     // traverse the whole list
     while (current != nullptr){
 
-        // if we find the desired customer which we want to retrieve
+        
         if(current->data->getCustomerID() == customerID){
 
-            // point the foundCustomer pointer at it and return true to
-            // indicate that we found them
+            // point the foundCustomer pointer at it and return true
+            // when the customer was founded
             foundCustomer = current->data;
             return true;
 
@@ -87,10 +86,10 @@ bool HashTable::retrieveCustomer(int customerID, Customers*& foundCustomer) {
 //---------------------------- insert(Customers* customer) --------------------------------
 void HashTable::insert(Customers* customer){
 
-    //hash the customer's ID
+    // hash the customer's ID
     int IDHash = hash(customer->getCustomerID());
 
-    //store the head node of the bucket
+    // store the head node of the array
     node* current = array[IDHash];
     node* previous = nullptr;
 
@@ -114,14 +113,14 @@ void HashTable::insert(Customers* customer){
 
     if(previous == nullptr) {
 
-        //put the customer in at the front of the list, pointing to the previous
-        // head of the list
+        // put the customer in at the front of the list and 
+        // point to the previous head of the list
         current->next = new node(customer, nullptr);
 
     }else{
 
-        //put the customer in at the front of the list, pointing to the previous
-        // head of the list
+        // put the customer in at the front of the list and
+        // point to the previous head of the list
         previous->next = new node(customer, nullptr);
 
     }
@@ -130,26 +129,22 @@ void HashTable::insert(Customers* customer){
 //---------------------------- hash(int customerID) --------------------------------
 int HashTable::hash(int customerID) {
 
-    // hash based on the maximum hash size, the size of the array. This is a
-    // large prime number
+    // hash based on the maximum hash size with a large prime number
     return customerID % MAXHASHSIZE;
 
 }
 
-//---------------------------- hash(int customerID) --------------------------------
+//---------------------------- buildHashTable(ifstream& infile) --------------------------------
 void HashTable::buildHashTable(ifstream& infile) {
 
-    //while the file has data to read
     while(!infile.eof()) {
 
-        //create a new customer
+        // create a new customer
         Customers* temp = new Customers;
 
-        //if we are able to create a new Customer, aka all the data is correct
+        // all the data is correct if we are able to create a new Customers
         if(temp->setCustomer(infile)){
 
-            //and we haven't reached the end of file (no reason to insert a
-            // non-existent customer
             if(!infile.eof()) {
 
                 //insert the customer
@@ -157,14 +152,12 @@ void HashTable::buildHashTable(ifstream& infile) {
 
             }else{
 
-                //this is not good data, delete it
                 delete temp;
 
             }
         }else{
 
-            // we were unable to create a customer, delete this malformed
-            // abomination from hell
+            // delete this when we are unable to create a customer
             delete temp;
 
         }
