@@ -38,7 +38,7 @@ public:
     string getLastN() const;
 
 private:
-    // Unique Id Number
+    // Unique ID Number
     int customerID;
     // first name
     string firstN;
