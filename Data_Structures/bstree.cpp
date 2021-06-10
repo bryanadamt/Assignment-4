@@ -7,7 +7,7 @@
 // and to store them in order
 // --------------------------------------------------------------------------------------------------------------------
 
-#include "../Data Structures/bstree.h"
+#include "bstree.h"
 
 using namespace std;
 
@@ -32,13 +32,12 @@ void BSTree::makeEmpty() {
 // Preconditions: There has to be a BSTree
 // Postconditions: BSTree deleted
 void BSTree::makeEmptyHelper(Node*& curNode) {
-	if (curNode != NULL)
-	{
+	if (curNode != NULL) {
 		makeEmptyHelper(curNode->left);
 		makeEmptyHelper(curNode->right);
 
 		delete curNode->movie;
-		curNode->data = NULL;
+		curNode->movie = NULL;
 		delete curNode;
 		curNode = NULL;
 	}
@@ -49,7 +48,7 @@ void BSTree::makeEmptyHelper(Node*& curNode) {
 // Preconditions: There has to be a Node object
 // Postconditions: BSTree is changed if a new Node is inserted
 // 				   stays the same if it doesn't
-bool BSTree::insert(Movie* toInsert) 
+bool BSTree::insert(Movies* toInsert) 
 {
 	return insertHelper(root, toInsert);
 }
@@ -59,28 +58,21 @@ bool BSTree::insert(Movie* toInsert)
 // Preconditions: There has to be a Movie object
 // Postconditions: BSTree is changed if a new Node is inserted
 // 				   stays the same if it doesn't
-bool BSTree::insertHelper(Node*& curr, Movie*& toInsert) 
+bool BSTree::insertHelper(Node*& curr, Movies*& toInsert) 
 {
-	if (curr == NULL)
-	{
-		curr = new Node;
-		curr->movie = toInsert;
-		curr->left = NULL;
-		curr->right = NULL;
-		return true;
-	}
-	else if (*curr->movie == *toInsert)
-	{
-		return false;
-	}
-	else if (*curr->movie > *toInsert) 
-	{
-		insertHelper(curr->left, toInsert);
-	}
-	else if (*curr->movie < *toInsert)
-	{
-		insertHelper(curr->right, toInsert);
-	}
+	// if (curr == NULL) {
+	// 	curr = new Node;
+	// 	curr->movie = toInsert;
+	// 	curr->left = NULL;
+	// 	curr->right = NULL;
+	// 	return true;
+	// } else if (*curr->movie == *toInsert) {
+	// 	return false;
+	// } else if (*curr->movie > *toInsert) {
+	// 	insertHelper(curr->left, toInsert);
+	// } else if (*curr->movie < *toInsert) {
+	// 	insertHelper(curr->right, toInsert);
+	// }
 	return true;
 }
 
@@ -104,21 +96,18 @@ bool BinTree::retrieve(const Movie &toFind, Movie *&address) const
 void BinTree::retrieveHelper(const Movie &toFind, Movie *&address, Node *curr) const
 {
 	// if (curr != NULL) {
-	// 	if (*curr->data == toFind)
-	// 	{
+	// 	if (*curr->data == toFind) {
 	// 		address = curr->data;
-	// 	}
-	// 	else if (*curr->data < toFind)
-	// 	{
+	// 	} else if (*curr->data < toFind) {
 	// 		retrieveHelper(toFind, address, curr->right);
-	// 	}
-	// 	else 
-	// 	{
+	// 	} else {
 	// 		retrieveHelper(toFind, address, curr->left);
 	// 	}
-	// } 
-	// else 
-	// {
+	// } else {
 	// 	address = NULL;
 	// }
+}
+
+int main() {
+	return 0;
 }

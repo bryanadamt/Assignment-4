@@ -1,16 +1,16 @@
 #ifndef BSTREE_H
 #define BSTREE_H
 
-#include "../Movies/Movies.h"
+#include "../Movies/movies.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
 
 using namespace std;
 
-class BSTree() {
+class BSTree {
 
-    friend ostream& operator<<(ostream& out, const BSTree& toPrint);
+    //friend ostream& operator<<(ostream& out, const BSTree& toPrint);
 
     public:
         // Destructor
@@ -19,13 +19,13 @@ class BSTree() {
         // Delete the tree
         void makeEmpty();
         // Insert
-        void insert(Movies*);
+        bool insert(Movies*);
         // Retrieve
         bool retrieve(const Movies*, Movies *&) const;
-        // Display Inorder for ...
+        // Display BSTree Inorder
     private:
         struct Node{
-            Movie* movie;
+            Movies* movie;
             Node* left;
             Node* right;
         };
@@ -34,8 +34,8 @@ class BSTree() {
 
         // Helper Functions
 	    void makeEmptyHelper(Node *&);
-        bool insertHelper(Node *&, NodeData *&);
-	    void retrieveHelper(const NodeData &, NodeData *&, Node *) const;
-}
+        bool insertHelper(Node *&, Movies *&);
+	    void retrieveHelper(const Movies &, Movies *&, Node *) const;
+};
 
 #endif
