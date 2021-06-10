@@ -1,16 +1,18 @@
 #include "Movie_Store/store.h"
+#include "Movie_Store/store.cpp"
 
 #include <iostream>
 #include <fstream>
 
 using namespace std;
+
 int main() {
     ifstream movieData("data4movies.txt");
 
-    Store store;
-    store.readMovieData(movieData);
+    Store stores;
+    stores.readMovieData(movieData);
 
-    store.comedy.displayInOrder();
+    stores.comedy.displayInOrder();/////////////
 
     // MovieFactory m;
     // string line;
