@@ -18,15 +18,12 @@ using namespace std;
 class Borrow : public Transactions {
 
     public:
-
-        void doTrans(BST movies[], HashTable &customers);
-        bool setData(ifstream& infile, char transactionType);
+        // Constructor
+        Borrow();
 
 
     private:
-        string getString() const;
-        string movieTitle;
-        MovieFactory movieFactory;
+        
 };
 
 #endif

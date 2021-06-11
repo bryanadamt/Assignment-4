@@ -18,11 +18,10 @@ class Inventory : public Transactions {
 
     public:
 
-        void doTrans(BST movies[], HashTable &customers);
-        bool setData(ifstream& infile, char transactionType);
+
 
     private:
-        string getString() const;
+        
 
 };
 
