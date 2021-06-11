@@ -17,6 +17,8 @@ int main() {
     stores.readTransactionsData(transactionsData);
 
     stores.run();
+    // g++ main.cpp Transactions/*.cpp Movies/*.cpp Movie_Store/*.cpp Factories/*.cpp Data_Structures/*.cpp Customers/*.cpp
+    // to run
 
     return 0;
 }
