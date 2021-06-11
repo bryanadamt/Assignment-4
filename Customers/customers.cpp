@@ -33,7 +33,14 @@ Customers::~Customers()
 
 }
 
+//---------------------------- insertHistory(string historyToInsert) -----------------------------
+// adds a tansaction into the customer's history
+//---------------------------------------------------------------------------
+void Customers::insertHistory(string historyToInsert) 
+{
+    borrowingHistory.push_back(historyToInsert);
 
+}
 
 //---------------------------- operator<<(ostream& stream, const Customers& customer)---------------------------------
 // print out the customer's name and ID
@@ -69,6 +76,7 @@ bool Customers::setCustomerID(int customerID)
 {
     if ((customerID < 0) || (customerID > 9999))
     {
+        cout << "Error. Please check the customer ID: " << customerID << endl;
         return false;
     }
     else
