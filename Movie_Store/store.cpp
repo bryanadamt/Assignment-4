@@ -39,4 +39,10 @@ void Store::readMovieData(ifstream& movieData) {
             classics.insert(newMovie);
         }
     }
+
+    comedy.displayInOrder();
+    cout << endl;
+    drama.displayInOrder();
+    cout <<endl;
+    classics.displayInOrder();
 }
