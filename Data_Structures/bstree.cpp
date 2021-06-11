@@ -19,29 +19,29 @@ BSTree::~BSTree() {
 	makeEmpty();
 }
 
-//---------------------------- makeEmpty() -------------------------------------
-// Completely deletes current BSTree object
-// Preconditions: There has to be a BSTree object
-// Postconditions: BSTree object is deleted completely
-void BSTree::makeEmpty() {
-	makeEmptyHelper(root);
-}
+// //---------------------------- makeEmpty() -------------------------------------
+// // Completely deletes current BSTree object
+// // Preconditions: There has to be a BSTree object
+// // Postconditions: BSTree object is deleted completely
+// void BSTree::makeEmpty() {
+// 	makeEmptyHelper(root);
+// }
 
-//---------------------------- makeEmptyHelper(Node*&) -------------------------------------
-// Helper function to makeEmpty
-// Preconditions: There has to be a BSTree
-// Postconditions: BSTree deleted
-void BSTree::makeEmptyHelper(Node*& curNode) {
-	if (curNode != NULL) {
-		makeEmptyHelper(curNode->left);
-		makeEmptyHelper(curNode->right);
+// //---------------------------- makeEmptyHelper(Node*&) -------------------------------------
+// // Helper function to makeEmpty
+// // Preconditions: There has to be a BSTree
+// // Postconditions: BSTree deleted
+// void BSTree::makeEmptyHelper(Node*& curNode) {
+// 	if (curNode != NULL) {
+// 		makeEmptyHelper(curNode->left);
+// 		makeEmptyHelper(curNode->right);
 
-		delete curNode->movie;
-		curNode->movie = NULL;
-		delete curNode;
-		curNode = NULL;
-	}
-}
+// 		delete curNode->movie;
+// 		curNode->movie = NULL;
+// 		delete curNode;
+// 		curNode = NULL;
+// 	}
+// }
 
 //---------------------------- insert(Movies*) -------------------------------------
 // Inserts a new Node to the BSTree
