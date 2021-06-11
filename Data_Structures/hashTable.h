@@ -14,8 +14,6 @@
 using namespace std;
 
 class HashTable {
-
-
     struct node{
 
         Customers* data;
