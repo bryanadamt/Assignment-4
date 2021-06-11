@@ -78,37 +78,34 @@ bool Queue::empty() {
     return (head == nullptr);
 }
 
-//---------------------------- buildQueue(ifstream &infile) --------------------------------
-void Queue::buildQueue(ifstream &infile) {
+//---------------------------- buildQueue(ifstream &input) --------------------------------
+void Queue::buildQueue(ifstream &input) {
 
     // read the transaction type
     char transactionType;
-    infile >> transactionType;
+    input >> transactionType;
 
-    while(!infile.eof()) {
+    while(!input.eof()) {
 
         // create a pointer
         Transactions* temp = nullptr;
 
-        if(transactionFactory.createTransaction(transactionType, temp, infile)){
-
-            // when the transaction was created, push it into the queue
+        if(transactionFactory.transactionMaker(transactionType, temp, input)){
             push(temp);
-
         }else{
 
             // remove the rest of the line
             string store;
-            getline(infile, store);
+            getline(input, store);
 
             // delete the temporary transaction
             if(temp != nullptr) delete temp;
         }
 
         // read the next transaction type
-        infile >> transactionType;
+        input >> transactionType;
 
         // break at the end of the file
-        if(infile.eof()) break;
+        if(input.eof()) break;
     }
 }
