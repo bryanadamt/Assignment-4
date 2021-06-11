@@ -12,6 +12,7 @@
 #include "transactions.h"
 #include "../Movies/movies.h"
 #include "../Factories/movieFactory.h"
+#include "../Data_Structures/hashTable.h"
 
 using namespace std;
 
@@ -19,10 +20,10 @@ class Borrow : public Transactions {
 
     public:
         // Constructor
-        Borrow(int, char, char, Movie*);
-
+        Borrow(int, char, char, Movie*, HashTable*);
+        void doBorrow(Movies*[BSTree*]);
     private:
-        Customers* customer;
+        Customers* customer = NULL;
 };
 
 #endif
