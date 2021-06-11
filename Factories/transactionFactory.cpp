@@ -28,10 +28,11 @@ Transactions* TransactionFactory::transactionMaker(stringstream& lineData, HashT
     if (type == 'I') {
         transaction = new Inventory();
     } else if (type == 'H') {
+        int customerID;
         lineData >> customerID;
         transaction = new History(customerID, customerDatabase);
     } else {
-        BSTree* movieDatabase[]; //movie database
+        BSTree* movieDatabase[97]; //movie database
         int customerID;
         char type, genre; 
         Movies* movie;
