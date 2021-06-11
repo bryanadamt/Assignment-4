@@ -56,11 +56,15 @@ string Classics::getMActor() const {
 //---------------------------- operator== -------------------------------------
 // Overload equality operator
 // Preconditions: There has to be 2 Classics objects
+// Checks of the title and director and release date is the same
+// The assignment asks to sort by mactor, but to combine in classics,
+// it might be the same movie but have multiple major actors,
+// so it's best to compare using the said comparison attribute.
 // Postconditions: Classics is unchanged
 bool Classics::operator==(const Movies &toCompare) const {
         return (year == toCompare.getYear() &&
-                month == toCompare.getMonth() && 
-                mActor == toCompare.getMActor());
+                title == toCompare.getTitle() &&
+                director == toCompare.getDirector());
 }
 
 //---------------------------- operator> -------------------------------------
