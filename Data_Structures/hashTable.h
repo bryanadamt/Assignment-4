@@ -32,7 +32,7 @@ class HashTable {
 
     private:
         const int HASHSIZE = 97;
-        Node* array[HASHSIZE];
+        Node* array[97];
         int hash(int customerID);
 };
 

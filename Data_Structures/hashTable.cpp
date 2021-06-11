@@ -6,12 +6,12 @@
 // Purpose - The class is a representation of a customer
 // --------------------------------------------------------------------------------------------------------------------
 
-#include "hashtable.h"
+#include "hashTable.h"
 
 using namespace std;
 
 //---------------------------- HashTable() --------------------------------
-HashTable::HashTable(){
+HashTable::HashTable() {
     for(int i = 0; i < HASHSIZE; i++){
         array[i] = NULL;
     }
@@ -19,9 +19,9 @@ HashTable::HashTable(){
 
 //---------------------------- retrieve(int customerID, Customers*& foundCustomer) --------------------------------
 bool HashTable::retrieve(int customerID, Customers*& foundCustomer) {
-    int hash = hash(customerID);
-    Node* current = array[hash];
-    while (current != nullptr){
+    int hashed = hash(customerID);
+    Node* current = array[hashed];
+    while (current != NULL){
         if(current->data->getCustomerID() == customerID) {
             foundCustomer = current->data;
             return true;
@@ -29,22 +29,16 @@ bool HashTable::retrieve(int customerID, Customers*& foundCustomer) {
             current = current->next;
         }
     }
-
-    // return false when customer's not founded
     return false;
 }
 
 //---------------------------- insert(Customers* customer) --------------------------------
 void HashTable::insert(Customers* customer){
-
-    // hash the customer's ID
     int IDHash = hash(customer->getCustomerID());
-
-    // store the head Node of the array
     Node* current = array[IDHash];
-    Node* previous = nullptr;
+    Node* previous = NULL;
 
-    while(current != nullptr){
+    while(current != NULL){
         if(customer->getCustomerID() == current->data->getCustomerID()){
             return;
         } else {
@@ -53,10 +47,10 @@ void HashTable::insert(Customers* customer){
         }
     }
 
-    if(previous == nullptr) {
-        current->next = new Node(customer, nullptr);
+    if(previous == NULL) {
+        current->next = new Node(customer, NULL);
     } else {
-        previous->next = new Node(customer, nullptr);
+        previous->next = new Node(customer, NULL);
     }
 }
 
@@ -65,14 +59,16 @@ int HashTable::hash(int customerID) {
     return customerID % HASHSIZE;
 }
 
-//---------------------------- buildHashTable(ifstream& infile) --------------------------------
-void HashTable::buildHashTable(ifstream& infile) {
-    while(!infile.eof()) {
-        Customers* temp = new Customers;
-        if(temp->setCustomerData(infile)) {
-            if(!infile.eof()) {
-                insert(temp);
-            }
-        }
-    }
+//---------------------------- buildHashTable(ifstream& input) --------------------------------
+void HashTable::buildHashTable(ifstream& input) {
+    // while(!input.eof()) {
+    //     Customers* temp = new Customers;
+    //     if(temp->setCustomerData(input)) {
+    //         if(!input.eof()) {
+    //             insert(temp);
+    //         }
+    //     }
+    // }
 }
+
+int main() {}
