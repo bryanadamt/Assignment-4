@@ -27,29 +27,25 @@ Transactions* TransactionFactory::transactionMaker(stringstream& lineData, HashT
 
     if (type == 'I') {
         transaction = new Inventory();
-        return transaction;
     } else if (type == 'H') {
         lineData >> customerID;
         transaction = new History(customerID, customerDatabase);
-        return transaction;
-    }
+    } else {
+        BSTree* movieDatabase[]; //movie database
+        int customerID;
+        char type, genre; 
+        Movies* movie;
+        MovieFactory m;
 
-    BSTree* movieDatabase[]; //movie database
-    int customerID;
-    char type, genre; 
-    Movies* movie;
-    MovieFactory m;
+        lineData >> customerID >> type >> genre;
+        movie = m.movieMaker(genre, lineData);
 
-    lineData >> customerID >> type >> genre;
-    movie = m.movieMaker(genre, lineData);
-
-    if (type == 'B') {
-        transaction = new Borrow();
-    } else if (type == 'R') {
-        transaction = new Return();
+        if (type == 'B') {
+            transaction = new Borrow(customerID, type, genre, movie, customerDatabase);
+        } else if (type == 'R') {
+            transaction = new Return(customerID, type, genre, movie, customerDatabase);
+        }
     }
 
     return transaction;
 }
-
-Movies* TransactionFactory::
