@@ -10,19 +10,14 @@
 #define INVENTORY_H
 
 #include "transactions.h"
-
+#include "../Data_Structures/BSTree.h"
 
 using namespace std;
 
 class Inventory : public Transactions {
-
     public:
-
-
-
-    private:
-        
-
+        Inventory();
+        void readFullInventory(Movies*[BSTree*]);
 };
 
 #endif

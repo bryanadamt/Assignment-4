@@ -30,8 +30,7 @@ public:
 
 
     void setTransactionType(char transactionType);
-    void setCusomersID(int customerID);
-    void setFormat(char format);
+    void setCustomersID(int customerID);
     void setMovie(Movies* movie);
 
 
@@ -40,7 +39,6 @@ private:
     int customerID;
     char transactionType;
     char genre;
-    char format;
     Movies* movie;
 
 };

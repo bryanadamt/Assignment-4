@@ -24,7 +24,7 @@ Transactions* TransactionFactory::transactionMaker(stringstream& lineData) {
         cout << " is not a valid type. Line is deleted."<< endl;
         return NULL;
     }
-    
+    // read and construct
     if (type == 'B') {
         transaction = new Borrow();
     } else if (type == 'R') {
