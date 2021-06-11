@@ -1,5 +1,5 @@
 // ------------------------------------------------ customers.h -------------------------------------------------------
-// Bryan Adam Tjendra, CSS 343B
+// Ayumi Oishi, CSS 343B
 // Created: 30/5/2021
 // Date of Last Modification: 10/6/2021
 // --------------------------------------------------------------------------------------------------------------------
@@ -27,19 +27,18 @@ public:
 	Customers();
 	Customers(string firstN, string lastN, int customerID);
 	~Customers();    
-    
 
-    // // display the customer's history
-    // void displayHistory();
+    // display the customer's history
+    void displayHistory();
 
     // insert the customer's history
 	void insertHistory(string historyToInsert);
 
-    // // borrow a movie from the movie store
-    // void borrowMovie(Movies*& movie);
+    // borrow a movie from the movie store
+    void borrowMovie(Movies*& movie);
 
-    // // get a borrowed movie to return it
-    // bool getBorrowedMovie(Movies*& movie, Movies*& returnMovie);
+    // get a borrowed movie to return it
+    bool getBorrowedMovie(Movies*& movie, Movies*& returnMovie);
 
 
     // getters and setters
@@ -52,17 +51,11 @@ public:
 	bool setLastN(string lastN);
 	bool setCustomerData(string firstN, string lastN, int customerID);
 
-
 private:
-    // Unique ID Number
     int customerID;
-    // first name
     string firstN;
-    // last name
     string lastN;
-    
     vector<string> borrowingHistory;
-
 };
 
 #endif
