@@ -10,22 +10,14 @@
 #define HISTORY_H
 
 #include "transactions.h"
-
+#include "../Customers/customers.h"
 
 using namespace std;
 
 class History : public Transactions {
 
     public:
-
-        void doTrans(BST movies[], HashTable &customers);
-        bool setData(ifstream& infile, char transactionType);
-
-
-    private:
-        string getString() const;
-        string customerName;
-
+        History(int);
 };
 
 #endif

@@ -11,36 +11,30 @@
 
 #include "../Data_Structures/bstree.h"
 #include "../Data_Structures/hashtable.h"
+#include "../Movies/movies.h"
 
 using namespace std;
 
 class Transactions {
 
 public:
-
-    virtual void doTrans(BST movies[], HashTable &customers) = 0;
-    virtual bool setData(ifstream& infile, char transactionType) = 0;
-    virtual string getString() const = 0;
-
     // getters and setters
     char getTransactionType() const;
     int getCustomersID() const;
-    char getFormat() const;
+    char getMediaType() const;
     Movies* getMovie() const;
-
 
     void setTransactionType(char transactionType);
     void setCustomersID(int customerID);
+    void getMediaType(char mediaType);
     void setMovie(Movies* movie);
 
-
 private:
-
     int customerID;
     char transactionType;
     char genre;
+    char mediaType;
     Movies* movie;
-
 };
 
 #endif
