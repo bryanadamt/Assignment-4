@@ -21,7 +21,7 @@ Borrow::Borrow(int ID, char mediaType, char genre, Movies* movie, HashTable* dat
     database.retrieveCustomer(customerID, this->customer);
 }
 
-void Borrow::doBorrow(BSTree* [] movieDatabase) {
+void Borrow::doBorrow(BSTree [] movieDatabase) {
     if (!validChecker(movieDatabase)) {
         return;
     }
@@ -31,7 +31,7 @@ void Borrow::doBorrow(BSTree* [] movieDatabase) {
     // then insert to customer history.
 }
 
-bool Borrow::validChecker(BSTree* [] movieDatabase) {
+bool Borrow::validChecker(BSTree [] movieDatabase) {
     // Check Valid Customer
     if (customer == NULL) {
         cout << "Fail to retrieve customer account" << endl;

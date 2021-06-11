@@ -17,7 +17,7 @@ using namespace std;
 class Inventory : public Transactions {
     public:
         Inventory();
-        void readFullInventory(BSTree* []);
+        void readFullInventory(BSTree []);
 };
 
 #endif

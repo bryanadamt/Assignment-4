@@ -22,7 +22,7 @@ Return::Return(int ID, char mediaType, char genre, Movies* movie, HashTable* dat
     database.retrieveCustomer(customerID, this->customer);
 }
 
-void Return::doReturn(BSTree* [] movieDatabase) {
+void Return::doReturn(BSTree [] movieDatabase) {
     if (!validChecker(movieDatabase)) {
         return;
     }
@@ -32,7 +32,7 @@ void Return::doReturn(BSTree* [] movieDatabase) {
     // then insert to customer history.
 }
 
-bool Return::validChecker(BSTree* [] movieDatabase) {
+bool Return::validChecker(BSTree [] movieDatabase) {
     // Check Valid Customer
     if (customer == NULL) {
         cout << "Fail to retrieve customer account" << endl;

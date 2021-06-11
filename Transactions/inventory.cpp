@@ -20,7 +20,7 @@ const int GENRES = 3; // number of genres
 // to inventory, the class can be modified.
 Inventory::Inventory() {}
 
-void Inventory::readFullInventory(BSTree* [] moviesArray) {
+void Inventory::readFullInventory(BSTree [] moviesArray) {
     for (int i = 0; i < GENRES; i++) {
         BSTree temp;
         temp = moviesArray[i];
