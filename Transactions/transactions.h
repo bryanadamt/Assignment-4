@@ -23,7 +23,7 @@ public:
     virtual string getString() const = 0;
 
     // getters and setters
-    char getTransationType() const;
+    char getTransactionType() const;
     int getCustomersID() const;
     char getFormat() const;
     Movies* getMovie() const;
