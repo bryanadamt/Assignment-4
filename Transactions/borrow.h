@@ -20,9 +20,10 @@ class Borrow : public Transactions {
 
     public:
         // Constructor
-        Borrow(int, char, char, Movie*, HashTable*);
-        void doBorrow(Movies*[BSTree*]);
+        Borrow(int, char, char, Movies*, HashTable*);
+        void doBorrow(BSTree* []);
     private:
+        bool validChecker(BSTree* []);
         Customers* customer = NULL;
 };
 
