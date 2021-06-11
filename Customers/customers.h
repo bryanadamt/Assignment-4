@@ -9,9 +9,10 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
-#include <stack>
-#include <queue>
-#include <fstream>
+#include <vector>
+#include <string>
+#include <iostream>
+
 #include "../Data_Structures/bstree.h"
 
 using namespace std;
@@ -22,26 +23,35 @@ class Customers {
 
 public:
 
-    // set the customer
-    bool setCustomer(ifstream &infile);
+    // constructor and destructor
+	Customers();
+	Customers(string firstN, string lastN, int customerID);
+	~Customers();    
+    
 
-    // display the customer's history
-    void displayHistory();
+    // // display the customer's history
+    // void displayHistory();
 
-    // insert the customer's history
-	void insertHistory(string historyToInsert);
+    // // insert the customer's history
+	// void insertHistory(string historyToInsert);
 
-    // borrow a movie from the movie store
-    void borrowMovie(Movies*& movie);
+    // // borrow a movie from the movie store
+    // void borrowMovie(Movies*& movie);
 
-    // get a borrowed movie to return it
-    bool getBorrowedMovie(Movies*& movie, Movies*& returnMovie);
+    // // get a borrowed movie to return it
+    // bool getBorrowedMovie(Movies*& movie, Movies*& returnMovie);
 
 
     // getters and setters
     int getCustomerID() const;
     string getFirstN() const;
     string getLastN() const;
+
+	bool setCustomerID(int customerID);
+	bool setFirstN(string firstN);
+	bool setLastN(string lastN);
+	bool setCustomerData(string firstN, string lastN, int customerID);
+
 
 private:
     // Unique ID Number
@@ -51,8 +61,8 @@ private:
     // last name
     string lastN;
     
-    stack<string> borrowingHistory;
-    queue<Movies*> borrowedMovies;
+    vector<string> borrowingHistory;
+
 };
 
 #endif

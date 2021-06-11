@@ -142,24 +142,24 @@ void HashTable::buildHashTable(ifstream& infile) {
         // create a new customer
         Customers* temp = new Customers;
 
-        // all the data is correct if we are able to create a new Customers
-        if(temp->setCustomer(infile)){
+        // // all the data is correct if we are able to create a new Customers
+        // if(temp->setCustomerData(infile)){
 
-            if(!infile.eof()) {
+        //     if(!infile.eof()) {
 
-                //insert the customer
-                insert(temp);
+        //         //insert the customer
+        //         insert(temp);
 
-            }else{
+        //     }else{
 
-                delete temp;
+        //         delete temp;
 
-            }
-        }else{
+        //     }
+        // }else{
 
-            // delete this when we are unable to create a customer
-            delete temp;
+        //     // delete this when we are unable to create a customer
+        //     delete temp;
 
-        }
+        // }
     }
 }
