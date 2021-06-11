@@ -1,34 +1,22 @@
-#include "Movies/classics.h"
-#include "Movies/comedy.h"
-#include "Movies/drama.h"
-#include "Factories/movieFactory.h"
-#include "Data_Structures/bstree.h"
+#include "Movie_Store/store.h"
+#include "Movie_Store/store.cpp"
 
-#include <sstream>
 #include <iostream>
 #include <fstream>
-#include <string>
 
 using namespace std;
-int main() {
-    cout << "a";
-    ifstream movieData("data4movies.txt");
-    if (!movieData) {
-		cout << "File could not be opened." << endl;
-		return -1;
-	}
 
-    MovieFactory m;
-    string line;
-    cout << "a";
-    while (getline(movieData, line)) {
-        stringstream ss(line);
-        Movies *newMovie = NULL;
-        newMovie = m.movieMaker(ss);
-        if (newMovie != NULL) {
-            newMovie->toString();
-        }
-    }
+int main() {
+    ifstream movieData("data4movies.txt");
+
+    Store stores;
+    stores.readMovieData(movieData);
+
+    stores.comedy.displayInOrder();
+    cout << endl;
+    stores.classics.displayInOrder();
+    cout << endl;
+    stores.drama.displayInOrder();
 
     return 0;
 }

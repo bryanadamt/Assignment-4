@@ -26,8 +26,17 @@ void Store::readMovieData(ifstream& movieData) {
         Movies *newMovie = NULL;
         stringstream ss(line);
         newMovie = mFactory.movieMaker(ss);
-        // reminder: if input is invalid newMovie is still NULL
-    }
 
-    // put the newMovie to bst
+        if (newMovie == NULL) {
+            continue;
+        }
+
+        if (newMovie->getGenre() == 'F') {
+            comedy.insert(newMovie);
+        } else if (newMovie->getGenre() == 'D') {
+            drama.insert(newMovie);
+        } else if (newMovie->getGenre() == 'C'){
+            classics.insert(newMovie);
+        }
+    }
 }

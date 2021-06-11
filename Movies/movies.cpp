@@ -18,6 +18,8 @@ Movies::Movies() {
     this->stock = 0;
     this->title = "";
     this->director = "";
+    this->mActor = "";
+    this->month = 0;
     this->year = 0;
 }
 
@@ -79,4 +81,17 @@ string Movies::getDirector() const {
 // get the year number of a certain movie
 int Movies::getYear() const {
     return year;
+}
+
+
+//---------------------------- getMonth() -------------------------------------
+// Gets the month of a classic movie
+int Movies::getMonth() const {
+    return month;
+}
+
+//---------------------------- getMActor() -------------------------------------
+// Gets the full name of the major actor
+string Movies::getMActor() const {
+    return mActor;
 }

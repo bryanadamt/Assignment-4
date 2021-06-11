@@ -21,13 +21,14 @@ class Classics : public Movies {
         // Destructor
         ~Classics();
 
-        // Setter and Getter
+        // Setter
         void setMonth(int);
         void setMActor(string);
 
         int getMonth() const;
         string getMActor() const;
 
+        
         // Operators
         bool operator==(const Movies&) const;
         bool operator>(const Movies&) const;

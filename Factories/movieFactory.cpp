@@ -24,8 +24,8 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     genre = data[0];
 
     if (genre != 'F' && genre != 'D' && genre != 'C') {
-        cout << "invalid input detected " << genre;
-        cout << " is not a valid genre."<< endl;
+        cout << "Invalid input detected " << genre;
+        cout << " is not a valid genre. Line is deleted."<< endl;
         return NULL;
     }
 
@@ -37,8 +37,10 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     stock = stoi(data);
     // Get Director Name
     getline(lineData, director, ',');
+    director.erase(0, 1); // To erase the first space
     // Get Title
     getline(lineData, title, ',');
+    title.erase(0,1); // To erase the first space
     // Get the rest of the data
     getline(lineData, data, ',');
 
@@ -55,6 +57,5 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
         actor = fname + " " + lname;
         newMovie = new Classics(genre, stock, director, title, actor, month, year);
     }
-
     return newMovie;
 }
