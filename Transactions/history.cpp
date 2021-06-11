@@ -13,7 +13,7 @@ using namespace std;
 
 History::History(int customerID, HashTable* database) {
     setCustomersID(customerID);
-    database.retrieveCustomer(customerID, this->customer);
+    database->retrieveCustomer(customerID, this->customer);
 }
 
 void History::showHistory() {

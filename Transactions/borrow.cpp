@@ -13,15 +13,14 @@ using namespace std;
 
 //---------------------------- Borrow(int, char, char, Movie*) --------------------------------
 Borrow::Borrow(int ID, char mediaType, char genre, Movies* movie, HashTable* database) {
-    setCustomersID(customerID);
+    setCustomersID(ID);
     setMediaType(mediaType);
     setGenre(genre);
     setMovie(movie);
-    retrieveCustomer(customerID, this->customer);
-    database.retrieveCustomer(customerID, this->customer);
+    database->retrieveCustomer(getCustomersID(), this->customer);
 }
 
-void Borrow::doBorrow(BSTree [] movieDatabase) {
+void Borrow::doBorrow(BSTree movieDatabase[]) {
     if (!validChecker(movieDatabase)) {
         return;
     }
@@ -31,21 +30,21 @@ void Borrow::doBorrow(BSTree [] movieDatabase) {
     // then insert to customer history.
 }
 
-bool Borrow::validChecker(BSTree [] movieDatabase) {
+bool Borrow::validChecker(BSTree movieDatabase[]) {
     // Check Valid Customer
     if (customer == NULL) {
         cout << "Fail to retrieve customer account" << endl;
-        cout << getCustomerID() << " does not exist." << endl;
+        cout << getCustomersID() << " does not exist." << endl;
         return false;
     }
 
     // Check Valid Movie
     Movies* tempMovie;
-    if (genre == 'F') {
+    if (getGenre() == 'F') {
         movieDatabase[0].retrieve(getMovie(), tempMovie);
-    } else if (genre == 'D') {
+    } else if (getGenre() == 'D') {
         movieDatabase[1].retrieve(getMovie(), tempMovie);
-    } else if (genre == 'C') {
+    } else if (getGenre() == 'C') {
         movieDatabase[2].retrieve(getMovie(), tempMovie);
     }
 

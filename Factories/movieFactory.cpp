@@ -67,16 +67,17 @@ Movies* movieMaker(char genre, stringsteam& data) {
     int month, year;
 
     if (genre == 'F') {
-        getline(infile, title, ',');
-        getline(infile, temp, ',');
+        getline(data, title, ',');
+        getline(data, temp, ',');
         year = stoi(temp);
         newMovie = new Comedy(title, year);
     } else if (genre == 'D') {
-        getline(infile, director, ',');
-        getline(infile, title, ',');
+        getline(data, director, ',');
+        getline(data, title, ',');
         newMovie = new Drama(director, title);
     } else if (genre == 'C') {
-        data >> month >> year >> actor;
+        data >> month >> year;
+        data >> actor;
         newMovie = new Classics(month, year, actor);
     }
 }

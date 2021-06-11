@@ -10,7 +10,7 @@
 #define TRANSACTIONS_H
 
 #include "../Data_Structures/bstree.h"
-#include "../Data_Structures/hashtable.h"
+#include "../Data_Structures/hashTable.h"
 #include "../Movies/movies.h"
 
 using namespace std;

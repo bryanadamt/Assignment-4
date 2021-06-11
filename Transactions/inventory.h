@@ -10,7 +10,7 @@
 #define INVENTORY_H
 
 #include "transactions.h"
-#include "../Data_Structures/BSTree.h"
+#include "../Data_Structures/bstree.h"
 
 using namespace std;
 
