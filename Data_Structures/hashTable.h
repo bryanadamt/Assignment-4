@@ -1,5 +1,5 @@
 // ------------------------------------------------ hashTable.h -------------------------------------------------------
-// Bryan Adam Tjendra, CSS 343B
+// Ayumi Oishi, CSS 343B
 // Created: 10/6/2021
 // Date of Last Modification: 10/6/2021
 // --------------------------------------------------------------------------------------------------------------------
@@ -14,37 +14,26 @@
 using namespace std;
 
 class HashTable {
-    struct node{
+    struct Node{
 
         Customers* data;
-        node* next;
+        Node* next;
 
-        node(Customers* c, node* n) :
+        Node(Customers* c, Node* n) :
                 data(c), next(n) {};
     };
 
-    // set the array size as the MAXHASHSIZE
-    node* array[97];
+    public:
+        HashTable();
 
+        bool retrieve(int customerID, Customers*& foundCustomer);
+        void insert(Customers *customer);
+        void buildHashTable(ifstream &infile);
 
-public:
-
-    HashTable();
-    ~HashTable();
-
-    // retrieve function
-	bool retrieveCustomer(int customerID, Customers*& foundCustomer);
-
-    // insert function
-    void insert(Customers *customer);
-
-    // building function
-	void buildHashTable(ifstream &infile);
-
-private:
-    const int MAXHASHSIZE = 97;
-    int hash(int customerID);
-
+    private:
+        const int HASHSIZE = 97;
+        Node* array[97];
+        int hash(int customerID);
 };
 
 #endif
