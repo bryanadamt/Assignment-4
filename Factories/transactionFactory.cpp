@@ -10,6 +10,11 @@
 #include <iostream>
 using namespace std;
 
-void TransactionFactory::transactionMaker() {
-    
+Transactions* TransactionFactory::transactionMaker(stringstream& lineData) {
+    Transactions *transaction = NULL;
+
+    char type;
+    lineData >> type;
+
+    return transaction;
 }
