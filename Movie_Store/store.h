@@ -20,15 +20,14 @@ class Store {
     public:
         // Read the entire movie file
         void readMovieData(ifstream&);
-
+        void readCustomerData(ifstream&);
+        void readTransactionsData(ifstream&);
+        void run();
+    private:
+        // Queue transactions;
         BSTree classics;
         BSTree comedy;
         BSTree drama;
-    private:
-        // Queue transactions;
-        // BSTree classics;
-        // BSTree comedy;
-        // BSTree drama;
         MovieFactory mFactory;
 };
 #endif

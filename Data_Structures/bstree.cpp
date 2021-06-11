@@ -63,8 +63,9 @@ bool BSTree::insertHelper(Node*& curr, Movies*& toInsert) {
 		curr->movie = toInsert;
 		curr->left = NULL;
 		curr->right = NULL;
-		return true;
 	} else if (*curr->movie == *toInsert) {
+		int newStock = curr->movie->getStock() + toInsert->getStock();
+		curr->movie->setStock(newStock);
 		return false;
 	} else if (*curr->movie > *toInsert) {
 		insertHelper(curr->left, toInsert);
