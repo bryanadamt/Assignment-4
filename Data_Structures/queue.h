@@ -30,7 +30,7 @@ class Queue {
     };
 
 private:
-	// TransactionFactory transactionFactory;
+	TransactionFactory transactionFactory;
 
     Node* head = nullptr;
 

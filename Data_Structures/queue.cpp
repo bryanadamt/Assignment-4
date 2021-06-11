@@ -87,23 +87,23 @@ void Queue::buildQueue(ifstream &infile) {
 
     while(!infile.eof()) {
 
-        // // create a pointer
-        // Transactions* temp = nullptr;
+        // create a pointer
+        Transactions* temp = nullptr;
 
-        // if(transactionFactory.createTransaction(transactionType, temp, infile)){
+        if(transactionFactory.createTransaction(transactionType, temp, infile)){
 
-        //     // when the transaction was created, push it into the queue
-        //     push(temp);
+            // when the transaction was created, push it into the queue
+            push(temp);
 
-        // }else{
+        }else{
 
-        //     // remove the rest of the line
-        //     string store;
-        //     getline(infile, store);
+            // remove the rest of the line
+            string store;
+            getline(infile, store);
 
-        //     // delete the temporary transaction
-        //     if(temp != nullptr) delete temp;
-        // }
+            // delete the temporary transaction
+            if(temp != nullptr) delete temp;
+        }
 
         // read the next transaction type
         infile >> transactionType;
