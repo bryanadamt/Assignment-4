@@ -62,7 +62,8 @@ string Classics::getMActor() const {
 // so it's best to compare using the said comparison attribute.
 // Postconditions: Classics is unchanged
 bool Classics::operator==(const Movies &toCompare) const {
-        return (year == toCompare.getYear() &&
+        return (month == toCompare.getMonth() &&
+                year == toCompare.getYear() &&
                 title == toCompare.getTitle() &&
                 director == toCompare.getDirector());
 }

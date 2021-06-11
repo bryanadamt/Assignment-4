@@ -33,8 +33,8 @@ class Movies {
     string getTitle() const;
     int getYear() const;
 
-    int getMonth() const;
-    string getMActor() const;
+    virtual int getMonth() const;
+    virtual string getMActor() const;
 
     // Operators
     virtual bool operator==(const Movies&) const = 0;
