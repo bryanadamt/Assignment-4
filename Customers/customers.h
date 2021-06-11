@@ -26,7 +26,6 @@ public:
     // constructor and destructor
 	Customers();
 	Customers(string firstN, string lastN, int customerID);
-	~Customers();    
 
     // display the customer's history
     void displayHistory();
@@ -55,7 +54,7 @@ private:
     int customerID;
     string firstN;
     string lastN;
-    vector<string> borrowingHistory;
+    stack<string> borrowingHistory;
 };
 
 #endif
