@@ -17,6 +17,8 @@ class Comedy : public Movies {
     public:
         // Constructor
         Comedy(char, int, string, string, int);
+        Comedy(string, year);
+
         // Destructor
         ~Comedy();
 

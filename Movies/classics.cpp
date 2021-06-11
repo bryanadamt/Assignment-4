@@ -23,6 +23,13 @@ Classics::Classics(char genre, int stock, string director, string title,
     setYear(year);
 }
 
+// Partial Class
+Classics::Classics(int month, int year, string mActor) {
+    setMonth(month);
+    setYear(year);
+    setMActor(mActor);
+}
+
 //---------------------------- ~Classics() -------------------------------------
 // Destructor
 Classics::~Classics() {
@@ -64,8 +71,7 @@ string Classics::getMActor() const {
 bool Classics::operator==(const Movies &toCompare) const {
         return (month == toCompare.getMonth() &&
                 year == toCompare.getYear() &&
-                title == toCompare.getTitle() &&
-                director == toCompare.getDirector());
+                mActor == toCompare.getMActor());
 }
 
 //---------------------------- operator> -------------------------------------

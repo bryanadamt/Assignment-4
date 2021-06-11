@@ -17,6 +17,7 @@ class Classics : public Movies {
     public:
         // Constructor
         Classics(char, int, string, string, string, int, int);
+        Classics(int, int, string);
 
         // Destructor
         ~Classics();

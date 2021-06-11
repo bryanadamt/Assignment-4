@@ -58,3 +58,25 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
     }
     return newMovie;
 }
+
+//---------------------------- movieMaker(bool, stringstream&) -------------------------------------
+// partial Moviemaker
+Movies* movieMaker(char genre, stringsteam& data) {
+    Movies* movie;
+    string temp, title, director, actor;
+    int month, year;
+
+    if (genre == 'F') {
+        getline(infile, title, ',');
+        getline(infile, temp, ',');
+        year = stoi(temp);
+        newMovie = new Comedy(title, year);
+    } else if (genre == 'D') {
+        getline(infile, director, ',');
+        getline(infile, title, ',');
+        newMovie = new Drama(director, title);
+    } else if (genre == 'C') {
+        data >> month >> year >> actor;
+        newMovie = new Classics(month, year, actor);
+    }
+}

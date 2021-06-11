@@ -17,6 +17,8 @@ class Drama : public Movies {
     public:
         // Constructor
         Drama(char, int, string, string, int);
+        Drama(string director, string title);
+
         // Destructor
         ~Drama();
 

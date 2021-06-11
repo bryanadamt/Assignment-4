@@ -20,6 +20,12 @@ Comedy::Comedy(char genre,int stock, string director, string title, int year) {
     setYear(year);
 }
 
+// Partial Class
+Comedy::Comedy(string title, int year) {
+    setTitle(title);
+    setYear(year);
+}
+
 //---------------------------- ~Comedy() -------------------------------------
 // Destructor
 Comedy::~Comedy() {

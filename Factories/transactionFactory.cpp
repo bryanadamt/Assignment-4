@@ -13,7 +13,7 @@ using namespace std;
 
 //---------------------------- transactionMaker(stringstream&) -------------------------------------
 // Takes a line from the file and create a transaction object based on the data
-Transactions* TransactionFactory::transactionMaker(stringstream& lineData) {
+Transactions* TransactionFactory::transactionMaker(stringstream& lineData, HashTable* customerDatabase) {
     Transactions *transaction = NULL;
 
     char type;
@@ -25,24 +25,31 @@ Transactions* TransactionFactory::transactionMaker(stringstream& lineData) {
         return NULL;
     }
 
-    BSTree* [] //movie database
-    int customerID;
-    char type, genre;
-    Movies* movie;
-
-    // read and construct
-    if (type == 'B') {
-        lineData >> customerID >> type >> genre;
-        transaction = new Borrow();
-    } else if (type == 'R') {
-        lineData >> customerID >> type >> genre;
-        transaction = new Return();
-    } else if (type == 'I') {
+    if (type == 'I') {
         transaction = new Inventory();
+        return transaction;
     } else if (type == 'H') {
         lineData >> customerID;
-        transaction = new History();
+        transaction = new History(customerID, customerDatabase);
+        return transaction;
+    }
+
+    BSTree* movieDatabase[]; //movie database
+    int customerID;
+    char type, genre; 
+    Movies* movie;
+    MovieFactory m;
+
+    lineData >> customerID >> type >> genre;
+    movie = m.movieMaker(genre, lineData);
+
+    if (type == 'B') {
+        transaction = new Borrow();
+    } else if (type == 'R') {
+        transaction = new Return();
     }
 
     return transaction;
 }
+
+Movies* TransactionFactory::

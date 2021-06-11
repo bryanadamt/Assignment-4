@@ -20,6 +20,12 @@ Drama::Drama(char genre, int stock, string director, string title, int year) {
     setYear(year);
 }
 
+// Partial Class
+Drama::Drama(string director, string title) {
+    setDirector(director);
+    setTitle(title);
+}
+
 //---------------------------- ~Drama() -------------------------------------
 // Destructor
 Drama::~Drama() {
