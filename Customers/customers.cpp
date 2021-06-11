@@ -50,7 +50,7 @@ void Customers::displayHistory(){
     string temp;
 
     cout << endl;
-    cout << "The borrywing history for " << firstN << " " << lastN << endl;
+    cout << "The borrowing history for " << firstN << " " << lastN << endl;
 
     if(!borrowingHistory.empty()) {
 
@@ -81,7 +81,7 @@ void Customers::displayHistory(){
     }else{
 
         // there's no transactions
-        cout << "This customer has no transaction hitory." << endl << endl;
+        cout << "This customer has no transaction history." << endl << endl;
 
     }
 
@@ -174,8 +174,8 @@ bool Customers::getBorrowedMovie(Movies*& movie, Movies*& returnMovie) {
 ostream& operator<<(ostream& stream, const Customers& customer){
 
     stream << customer.getFirstN() << " " 
-           << customer.getLastN() << " (ID: " 
-           << customer.getCustomerID() << ")";
+            << customer.getLastN() << " (ID: " 
+            << customer.getCustomerID() << ")";
 
     return stream;
 }
