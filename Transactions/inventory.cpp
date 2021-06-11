@@ -11,46 +11,19 @@
 
 using namespace std;
 
-//---------------------------- setData(ifstream& infile, char transactionType) --------------------------------
-bool Inventory::setData(ifstream& infile, char transactionType){
+const int GENRES = 3; // number of genres
 
-    //set the transaction type
-    setTransactionType(transactionType);
+// Contructor for inventroy,
+// for now the class is just to perform one
+// specific function.
+// In the future, if more functions is to be added
+// to inventory, the class can be modified.
+Inventory::Inventory() {}
 
-    //return true, this method is always successful
-    return true;
-
-}
-
-
-//---------------------------- doTrans(BST movies[], HashTable &customers) --------------------------------
-void Inventory::doTrans(BST movies[], HashTable &customers) {
-
-    //print some returns to separate the inventory from the previous output
-    cout << endl << endl;
-
-    //print out all movie inventories
-    for(int i = 0; i < CURRENTMOVIEGENRES; i++){
-
-        cout << HEADERSTRING << endl;
-        cout << setw(HEADERLENGTH) << movieGenreNames[i] << endl;
-        cout << HEADERSTRING << endl << endl;
-
-        //print out a head line
-        cout << HEADERTITLE << HEADERSTOCK << endl << endl;
-
-        //print the given binary tree of movies
-        cout << movies[movieGenres[i] - 'A'] << endl;
+void Inventory::readFullInventory(Movies*[BSTree*] moviesArray) {
+    for (int i = 0; i < GENRES; i++) {
+        BSTree temp;
+        temp = moviesArray[i];
+        temp.displayInOrder();
     }
-
-    //print more returns to separate what comes after the inventory
-    cout << endl << endl;
-}
-
-
-//---------------------------- getString() --------------------------------
-string Inventory::getString() const {
-
-    //print the string representing this Transaction
-    return "Viewed store inventory.";
 }

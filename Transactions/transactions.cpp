@@ -11,56 +11,43 @@
 
 using namespace std;
 
-
-
-//---------------------------- getTransationType() --------------------------------
-char Transactions::getTransationType() const{
-
-    return transactionType;
-
-}
-
-        
-//---------------------------- getCustomersID() --------------------------------
-int Transactions::getCustomersID() const{
-
+int Transactions::getCustomersID() const {
     return customerID;
-
 }
 
-//---------------------------- getFormat() --------------------------------
-char Transactions::getFormat() const{
-
-    return format;
+char Transactions::getTransationType() const {
+    return transactionType;
 }
 
-//---------------------------- getMovie() --------------------------------
-// Movies* Transactions::getMovie() const{
-//     return movie;
-// }
+char Transactions::getMediaType() const {
+    return mediaType;
+}
 
+Movies* Transactions::getMovie() const {
+    return movie;
+}
 
-//---------------------------- setTransactionType(char transactionType) --------------------------------
-void Transactions::setTransactionType(char transactionType){
-
-    this->transactionType = transactionType;
-
+char Transactions::getGenre() const {
+    return genre;
 }
 
 
-//---------------------------- setCusomersID(int customerID) --------------------------------
-void Transactions::setCusomersID(int customerID){
-
+void Transactions::setCustomersID(int customerID ) {
     this->customerID = customerID;
 }
 
-//---------------------------- setFormat(char format) --------------------------------
-void Transactions::setFormat(char format){
-
-    this->format = format;
+void Transactions::setTransactionType(char transactionType) {
+    this->transactionType = transactionType;
 }
 
-//---------------------------- setMovie(Movies* movie) --------------------------------
-// void Transactions::setMovie(Movies* movie){
-//    this->movie = movie; 
-// }
+void Transactions::setMediaType(char mediaType) {
+    this->mediaType = mediaType;
+}
+
+void Transactions::setMovie(Movies* movie) {
+    this->movie = movie; 
+}
+
+void Transactions::setGenre(char genre) {
+    this->genre = genre;
+}

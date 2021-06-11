@@ -10,6 +10,8 @@
 #include "../Transactions/history.h"
 #include "../Transactions/inventory.h"
 #include "../Transactions/return.h"
+#include <iostream>
+#include <sstream>
 
 #ifndef TRANSACTIONFACTORY_H
 #define TRANSACTIONFACTORY_H
@@ -18,7 +20,8 @@ using namespace std;
 
 class TransactionFactory {
     public:
-        void transactionMaker();
+        // Assign transaction that was read from the file to one of the transaction type
+        Transactions* transactionMaker(stringstream&);
 };
 
 #endif
