@@ -26,6 +26,9 @@ void Borrow::doBorrow(BSTree* [] movieDatabase) {
         return;
     }
 
+    customer->borrow(getMovie());
+    getMovie()->setStock(getMovie()->getStock() - 1);
+    // then insert to customer history.
 }
 
 bool Borrow::validChecker(BSTree* [] movieDatabase) {

@@ -17,7 +17,6 @@
 using namespace std;
 
 class Borrow : public Transactions {
-
     public:
         // Constructor
         Borrow(int, char, char, Movies*, HashTable*);

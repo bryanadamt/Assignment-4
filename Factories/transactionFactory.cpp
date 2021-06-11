@@ -24,14 +24,23 @@ Transactions* TransactionFactory::transactionMaker(stringstream& lineData) {
         cout << " is not a valid type. Line is deleted."<< endl;
         return NULL;
     }
+
+    BSTree* [] //movie database
+    int customerID;
+    char type, genre;
+    Movies* movie;
+
     // read and construct
     if (type == 'B') {
+        lineData >> customerID >> type >> genre;
         transaction = new Borrow();
     } else if (type == 'R') {
+        lineData >> customerID >> type >> genre;
         transaction = new Return();
     } else if (type == 'I') {
         transaction = new Inventory();
     } else if (type == 'H') {
+        lineData >> customerID;
         transaction = new History();
     }
 

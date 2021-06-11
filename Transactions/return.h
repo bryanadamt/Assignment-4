@@ -12,22 +12,18 @@
 #include "transactions.h"
 #include "../Movies/movies.h"
 #include "../Factories/movieFactory.h"
+#include "../Data_Structures/hashTable.h"
 
 using namespace std;
 
 class Return : public Transactions {
-
     public:
-
-        void doTrans(BST movies[], HashTable &customers);
-        bool setData(ifstream& infile, char transactionType);
-
-
+        // Constructor
+        Return(int, char, char, Movies*, HashTable*);
+        void doBorrow(BSTree* []);
     private:
-        string getString() const;
-        string movieTitle;
-        MovieFactory movieFactory;
-
+        bool validChecker(BSTree* []);
+        Customers* customer = NULL;
 };
 
 #endif
