@@ -10,6 +10,8 @@
 #define CUSTOMER_H
 
 #include <vector>
+#include <stack>
+#include <queue>
 #include <string>
 #include <iostream>
 
@@ -34,10 +36,10 @@ public:
 	void insertHistory(string historyToInsert);
 
     // borrow a movie from the movie store
-    void borrowMovie(Movies*& movie);
+    void borrowMovie(Movies* movie);
 
     // get a borrowed movie to return it
-    bool getBorrowedMovie(Movies*& movie, Movies*& returnMovie);
+    bool getBorrowedMovie(Movies* movie, Movies* returnMovie);
 
 
     // getters and setters
@@ -55,6 +57,7 @@ private:
     string firstN;
     string lastN;
     stack<string> borrowingHistory;
+    queue<Movies*> borrowedMovies;
 };
 
 #endif

@@ -137,7 +137,7 @@ void Customers::insertHistory(string historyToInsert) {
 //---------------------------- borrowMovie(Movies*& movie) ---------------------------------
 // borrow a movie from the movie store
 //---------------------------------------------------------------------------
-void Customers::borrowMovie(Movies*& movie) {
+void Customers::borrowMovie(Movies* movie) {
     Movies* copy = movie;
     copy->setStock(1);
     borrowedMovies.push(copy);
@@ -146,7 +146,7 @@ void Customers::borrowMovie(Movies*& movie) {
 //---------------------------- getBorrowedMovie(Movies*& movie, Movies*& returnMovie) ---------------------------------
 // get a borrowed movie to return it
 //---------------------------------------------------------------------------
-bool Customers::getBorrowedMovie(Movies*& movie, Movies*& returnMovie) {
+bool Customers::getBorrowedMovie(Movies* movie, Movies* returnMovie) {
     stack<Movies*> stack;
     Movies* store;
 

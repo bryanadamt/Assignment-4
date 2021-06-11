@@ -17,7 +17,7 @@ Borrow::Borrow(int ID, char mediaType, char genre, Movies* movie, HashTable* dat
     setMediaType(mediaType);
     setGenre(genre);
     setMovie(movie);
-    database->retrieveCustomer(getCustomersID(), this->customer);
+    database->retrieve(getCustomersID(), this->customer);
 }
 
 void Borrow::doBorrow(BSTree movieDatabase[]) {
@@ -25,7 +25,7 @@ void Borrow::doBorrow(BSTree movieDatabase[]) {
         return;
     }
 
-    customer->borrow(getMovie());
+    customer->borrowMovie(getMovie());
     getMovie()->setStock(getMovie()->getStock() - 1);
     // then insert to customer history.
 }

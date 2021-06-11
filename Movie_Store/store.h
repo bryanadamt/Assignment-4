@@ -28,7 +28,7 @@ class Store {
         BSTree classics;
         BSTree comedy;
         BSTree drama;
-        BSTree BSTarray[] = {classics, comedy, drama};
+        //BSTree BSTarray[] = {classics, comedy, drama};
         MovieFactory mFactory;
 };
 #endif
