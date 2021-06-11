@@ -11,13 +11,13 @@
 
 using namespace std;
 
-//---------------------------- ~BSTree() -------------------------------------
-// Destructor
-// Preconditions: There has to be a BSTree object
-// Postconditions: BSTree object is deleted completely
-BSTree::~BSTree() {
-	makeEmpty();
-}
+// //---------------------------- ~BSTree() -------------------------------------
+// // Destructor
+// // Preconditions: There has to be a BSTree object
+// // Postconditions: BSTree object is deleted completely
+// BSTree::~BSTree() {
+// 	makeEmpty();
+// }
 
 // //---------------------------- makeEmpty() -------------------------------------
 // // Completely deletes current BSTree object

@@ -13,11 +13,11 @@ class BSTree {
     //friend ostream& operator<<(ostream& out, const BSTree& toPrint);
 
     public:
-        // Destructor
-        ~BSTree();
+        // // Destructor
+        // ~BSTree();
 
-        // Delete the tree
-        void makeEmpty();
+        // // Delete the tree
+        // void makeEmpty();
         // Insert
         bool insert(Movies*);
         // Retrieve
