@@ -9,8 +9,8 @@
 #ifndef TRANSACTIONS_H
 #define TRANSACTIONS_H
 
-#include "../Data Structures/bstree.h"
-#include "../Data Structures/hashtable.h"
+#include "../Data_Structures/bstree.h"
+#include "../Data_Structures/hashtable.h"
 
 using namespace std;
 
