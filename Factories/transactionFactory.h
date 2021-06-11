@@ -20,6 +20,7 @@ using namespace std;
 
 class TransactionFactory {
     public:
+        // Assign transaction that was read from the file to one of the transaction type
         Transactions* transactionMaker(stringstream&);
 };
 
