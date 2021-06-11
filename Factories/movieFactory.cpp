@@ -62,7 +62,7 @@ Movies* MovieFactory::movieMaker(stringstream& lineData) {
 //---------------------------- movieMaker(bool, stringstream&) -------------------------------------
 // partial Moviemaker
 Movies* movieMaker(char genre, stringstream& data) {
-    Movies* movie;
+    Movies* newMovie;
     string temp, title, director, actor;
     int month, year;
 
@@ -80,4 +80,6 @@ Movies* movieMaker(char genre, stringstream& data) {
         data >> actor;
         newMovie = new Classics(month, year, actor);
     }
+
+    return newMovie;
 }

@@ -18,8 +18,7 @@ Return::Return(int ID, char mediaType, char genre, Movies* movie, HashTable* dat
     setMediaType(mediaType);
     setGenre(genre);
     setMovie(movie);
-    retrieveCustomer(ID, this->customer);
-    database.retrieveCustomer(ID, this->customer);
+    database->retrieve(ID, this->customer);
 }
 
 void Return::doReturn(BSTree movieDatabase[]) {

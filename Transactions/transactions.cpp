@@ -15,7 +15,7 @@ int Transactions::getCustomersID() const {
     return customerID;
 }
 
-char Transactions::getTransationType() const {
+char Transactions::getTransactionType() const {
     return transactionType;
 }
 

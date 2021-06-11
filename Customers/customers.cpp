@@ -32,7 +32,7 @@ Customers::Customers(string firstN, string lastN, int customerID)
 //---------------------------------------------------------------------------
 void Customers::insertHistory(string historyToInsert) 
 {
-    borrowingHistory.push_back(historyToInsert);
+    borrowingHistory.push(historyToInsert);
 }
 
 //---------------------------- operator<<(ostream& stream, const Customers& customer)---------------------------------
@@ -124,14 +124,6 @@ void Customers::displayHistory(){
         queue.pop();
     }
     cout << endl;
-}
-
-//---------------------------- insertHistory(string historyToInsert) -----------------------------
-// adds a transaction into the customer's history
-//---------------------------------------------------------------------------
-void Customers::insertHistory(string historyToInsert) {
-    borrowingHistory.push(historyToInsert);
-
 }
 
 //---------------------------- borrowMovie(Movies*& movie) ---------------------------------
