@@ -29,8 +29,8 @@ public:
 	~Customers();    
     
 
-    // // display the customer's history
-    // void displayHistory();
+    // display the customer's history
+    void displayHistory();
 
     // insert the customer's history
 	void insertHistory(string historyToInsert);

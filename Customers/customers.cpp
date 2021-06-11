@@ -89,13 +89,13 @@ bool Customers::setCustomerID(int customerID)
 
 bool Customers::setFirstN(string firstN)
 {
-    firstN = firstN;
+    this->firstN = firstN;
     return true;
 }
 
 bool Customers::setLastN(string lastN)
 {
-    lastN = lastN;
+    this->lastN = lastN;
     return true;
 }
 
@@ -107,32 +107,7 @@ bool Customers::setCustomerData(string firstN, string lastN, int customerID)
 
 
 
-// //---------------------------- setCustomer() --------------------------------
-// // sets the customer's ID, first name, and last name from the file
-// //---------------------------------------------------------------------------
 
-// bool Customers::setCustomer(ifstream &infile){
-
-//     // read the customer's ID
-//     infile >> customerID;
-
-//     if (customerID < 0)
-//     {
-//         // display error message for the invalid user ID
-//         cout << "Error. Please check the customer ID: " << customerID << endl;
-
-//         return false;
-//     }
-//     else
-//     {
-//         // read and set the customer's name from the file
-//         infile >> lastN;
-//         infile >> firstN;
-
-//         return true;
-//     }
-    
-// }
 
 
 // //---------------------------- displayHistory() -----------------------------
@@ -182,15 +157,7 @@ bool Customers::setCustomerData(string firstN, string lastN, int customerID)
 
 // }
 
-// //---------------------------- insertHistory(string historyToInsert) -----------------------------
-// // adds a tansaction into the customer's history
-// //---------------------------------------------------------------------------
-// void Customers::insertHistory(string historyToInsert) {
 
-//     // push the string into the borrowingHistory queue
-//     borrowingHistory.push(historyToInsert);
-
-// }
 
 // //---------------------------- borrowMovie(Movies*& movie) ---------------------------------
 // // borrow a movie from the movie store
