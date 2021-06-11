@@ -1,7 +1,7 @@
 // ------------------------------------------------ customers.h -------------------------------------------------------
 // Bryan Adam Tjendra, CSS 343B
 // Created: 30/5/2021
-// Date of Last Modification:
+// Date of Last Modification: 10/6/2021
 // --------------------------------------------------------------------------------------------------------------------
 // Purpose - This class is a representation of a customer
 // --------------------------------------------------------------------------------------------------------------------
@@ -9,6 +9,8 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+#include <stack>
+#include <queue>
 #include <fstream>
 #include "../Data_Structures/bstree.h"
 
@@ -26,11 +28,15 @@ public:
     // display the customer's history
     void displayHistory();
 
-    // add a tansaction into the customer's history
-    void addTransaction();
+    // insert the customer's history
+	void insertHistory(string historyToInsert);
 
-    // get the customer's history
-    void getHistory();
+    // borrow a movie from the movie store
+    void borrowMovie(Movies*& movie);
+
+    // get a borrowed movie to return it
+    bool getBorrowedMovie(Movies*& movie, Movies*& returnMovie);
+
 
     // getters and setters
     int getCustomerID() const;
@@ -44,6 +50,9 @@ private:
     string firstN;
     // last name
     string lastN;
+    
+    stack<string> borrowingHistory;
+    queue<Movies*> borrowedMovies;
 };
 
 #endif
