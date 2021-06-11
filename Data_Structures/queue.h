@@ -9,10 +9,9 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-
 #include <fstream>
 #include "../Transactions/transactions.h"
-//#include "../Factories/transactionfactory.h"
+#include "../Factories/transactionfactory.h"
 
 using namespace std;
 
