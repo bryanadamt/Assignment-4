@@ -11,13 +11,16 @@
 
 #include "transactions.h"
 #include "../Customers/customers.h"
+#include "../Data_Structures/hashTable.h"
 
 using namespace std;
 
 class History : public Transactions {
-
     public:
-        History(int);
+        History(int, HashTable*);
+        void showHistory();
+    private:
+        Customers* customer;
 };
 
 #endif

@@ -11,3 +11,12 @@
 
 using namespace std;
 
+History::History(int customerID, HashTable* database) {
+    setCustomersID(customerID);
+    retrieveCustomer(customerID, this->customer);
+}
+
+void History::showHistory() {
+    // 
+}
+

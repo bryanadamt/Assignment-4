@@ -11,45 +11,43 @@
 
 using namespace std;
 
-//---------------------------- getTransationType() --------------------------------
-char Transactions::getTransationType() const{
-    return transactionType;
-}
-
-        
-//---------------------------- getCustomersID() --------------------------------
-int Transactions::getCustomersID() const{
+int Transactions::getCustomersID() const {
     return customerID;
 }
 
-//---------------------------- getMediaType() --------------------------------
-char Transactions::getMediaType() const{
+char Transactions::getTransationType() const {
+    return transactionType;
+}
+
+char Transactions::getMediaType() const {
     return mediaType;
 }
 
-// ---------------------------- getMovie() --------------------------------
-Movies* Transactions::getMovie() const{
+Movies* Transactions::getMovie() const {
     return movie;
 }
 
-
-//---------------------------- setTransactionType(char transactionType) --------------------------------
-void Transactions::setTransactionType(char transactionType){
-    this->transactionType = transactionType;
+char Transactions::getGenre() const {
+    return genre;
 }
 
 
-//---------------------------- setCusomersID(int customerID) --------------------------------
-void Transactions::setCusomersID(int customerID){
+void Transactions::setCustomersID(int customerID ) {
     this->customerID = customerID;
 }
 
-//---------------------------- setMediaType(char MediaType) --------------------------------
-void Transactions::setMediaType(char mediaType){
+void Transactions::setTransactionType(char transactionType) {
+    this->transactionType = transactionType;
+}
+
+void Transactions::setMediaType(char mediaType) {
     this->mediaType = mediaType;
 }
 
-//---------------------------- setMovie(Movies* movie) --------------------------------
-void Transactions::setMovie(Movies* movie){
+void Transactions::setMovie(Movies* movie) {
     this->movie = movie; 
+}
+
+void Transactions::setGenre(char genre) {
+    this->genre = genre;
 }

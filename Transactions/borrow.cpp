@@ -11,9 +11,9 @@
 
 using namespace std;
 
-//---------------------------- getString() --------------------------------
-string Borrow::getString() const {
-
-    return "Borrowed " + movieTitle + ".";
-
+//---------------------------- Borrow(int, char, char, Movie*) --------------------------------
+Borrow::Borrow(int ID, char mediaType, char genre, Movie* movie) {
+    setCustomersID(customerID);
+    setMediaType(mediaType);
+    setGenre(genre);
 }

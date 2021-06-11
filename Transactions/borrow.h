@@ -19,11 +19,10 @@ class Borrow : public Transactions {
 
     public:
         // Constructor
-        Borrow();
-
+        Borrow(int, char, char, Movie*);
 
     private:
-        
+        Customers* customer;
 };
 
 #endif

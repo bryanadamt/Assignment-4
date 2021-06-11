@@ -19,14 +19,16 @@ class Transactions {
 
 public:
     // getters and setters
-    char getTransactionType() const;
     int getCustomersID() const;
+    char getTransactionType() const;
+    char getGenre() const;
     char getMediaType() const;
     Movies* getMovie() const;
 
-    void setTransactionType(char transactionType);
     void setCustomersID(int customerID);
-    void getMediaType(char mediaType);
+    void setTransactionType(char transactionType);
+    void setGenre(char genre);
+    void setMediaType(char mediaType);
     void setMovie(Movies* movie);
 
 private:
