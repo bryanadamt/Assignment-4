@@ -32,8 +32,8 @@ public:
     // // display the customer's history
     // void displayHistory();
 
-    // // insert the customer's history
-	// void insertHistory(string historyToInsert);
+    // insert the customer's history
+	void insertHistory(string historyToInsert);
 
     // // borrow a movie from the movie store
     // void borrowMovie(Movies*& movie);
