@@ -64,7 +64,6 @@ bool BSTree::insertHelper(Node*& curr, Movies*& toInsert) {
 		curr->left = NULL;
 		curr->right = NULL;
 	} else if (*curr->movie == *toInsert) {
-		cout << curr->movie->getMonth() << " " << toInsert->getMonth() << endl;
 		int newStock = curr->movie->getStock() + toInsert->getStock();
 		curr->movie->setStock(newStock);
 		return false;
