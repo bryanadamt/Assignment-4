@@ -17,16 +17,16 @@ using namespace std;
 
 class Return : public Transactions {
 
-public:
+    public:
 
-    void doTrans(BST movies[], HashTable &customers);
-    bool setData(ifstream& infile, char transactionType);
+        void doTrans(BST movies[], HashTable &customers);
+        bool setData(ifstream& infile, char transactionType);
 
 
-private:
-    string getString() const;
-    string movieTitle;
-    MovieFactory movieFactory;
+    private:
+        string getString() const;
+        string movieTitle;
+        MovieFactory movieFactory;
 
 };
 

@@ -14,5 +14,11 @@
 #ifndef TRANSACTIONFACTORY_H
 #define TRANSACTIONFACTORY_H
 
+using namespace std;
+
+class TransactionFactory {
+    public:
+        void transactionMaker();
+};
 
 #endif

@@ -16,15 +16,15 @@ using namespace std;
 
 class History : public Transactions {
 
-public:
+    public:
 
-    void doTrans(BST movies[], HashTable &customers);
-    bool setData(ifstream& infile, char transactionType);
+        void doTrans(BST movies[], HashTable &customers);
+        bool setData(ifstream& infile, char transactionType);
 
 
-private:
-    string getString() const;
-    string customerName;
+    private:
+        string getString() const;
+        string customerName;
 
 };
 
